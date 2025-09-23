@@ -1,16 +1,28 @@
 #include <iostream>
+#include "src/parameters/Parameters.h"
+using namespace std;
+
+void message(const char * ag) {
+    cout << ag << " não será executado." << endl;
+}
 
 // TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
-int main() {
-    // TIP Press <shortcut actionId="RenameElement"/> when your caret is at the <b>lang</b> variable name to see how CLion can help you rename it.
-    auto lang = "C++";
-    std::cout << "Hello and welcome to " << lang << "!\n";
-
-    for (int i = 1; i <= 5; i++) {
-        // TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-        std::cout << "i = " << i << std::endl;
+int main(int argc, char* argv[]) {
+    if (argc < 3) {
+        cout << "Quantidades de argumentos errada" << endl;
+        cerr << "Usage: " << argv[0] << " <integer_parameter>" << endl;
+        return 1;
     }
-
+    if (string(argv[1]) == "1") {
+        cout << "Iniciando execução do AG: " << argv[1] << endl;
+        main_AG();
+    }else {
+        message("AG");
+    }
+    if (string(argv[2]) == "1") {
+        cout << "Iniciando execução do DE: " << argv[1] << endl;
+    }else {
+        message("DE");
+    }
     return 0;
-    // TIP See CLion help at <a href="https://www.jetbrains.com/help/clion/">jetbrains.com/help/clion/</a>. Also, you can try interactive lessons for CLion by selecting 'Help | Learn IDE Features' from the main menu.
 }
