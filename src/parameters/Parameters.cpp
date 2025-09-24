@@ -7,7 +7,7 @@
 class ESN;
 // Iniciando os Parametros da ESN
 int input_size = 8;
-int reservoir_size = 50;
+int reservoir_size = 25;
 int n_out = 4;
 double spectral_radius_d = 0.95;
 double sparsity = 0.1;
@@ -18,12 +18,20 @@ int n_examples = 10;
 int tamPop = 100;
 int lcrom = (reservoir_size + 1) * n_out;
 populacao popVelha, popNova;
-int nroMaxExec = 30; // numero de repeticoes do AG
-int maxGen = 500;    // numero maximo de geracoes
+int nroMaxExec = 10;//30 // numero de repeticoes do AG
+int maxGen = 100;//500    // numero maximo de geracoes
 bool elitismo = true; // true: elitismo ; false: sem elitismo
 int tamTorneio = 3;   // tamanho do torneio (usado na selecao por torneio)
 double taxaCross = 0.6;       // taxa de crossover
 double taxaMut = 1.0 / lcrom; // taxa de mutacao
+
+// Iniciando os parametros do DE
+double CR_DE=0.9; 									    // crossover probability: DE parameter CR
+int crossover_type = 2;								    // crossover type: 1 - Binomial Crossover; 2 - VIntX; 3 - GbinX
+int mutation_type = 2;									// mutation type: 1 - DE/rand/1; 2 - DE/best/1
+double F_DE=0.5;									    // differential weight: DE parameter F
+double pLL=0.2;										    // probability of testing LinkageLearning in an offspring
+int gen;											    // generation
 
 // Iniciando variaveis globais
 Random *random2;
@@ -40,6 +48,22 @@ double *pX;
 double *pY;
 double bestFitness;
 double *bestAcoes;
+int *file_gen;										// data to be stored: number of generations
+int *file_nfeval;									// data to be stored: number of fitness evaluations
+int *vsort_aux;										// auxiliar sorted vector of integers (used in different methods)
+double *file_best_fitness, *time_run;				// data to be stored: best fitness, runtime
+double *file_best_fitness_002, *file_best_fitness_020, *file_best_fitness_040 ;				// data to be stored: best fitness at different times
+double *file_best_fitness_gen;						// data to be stored: best fitness over the generations for run 0
+double *file_n_edges_eVIG;							// data to be stored: number of edges of the eVIG
+double *file_n_edges_eVIG_gen;						// data to be stored: number of edges of the eVIG over the generations for run 0
+double **File_best_ind;								// data to be stored: best individual
+int save_datagen_flag=1;
+int LL_flag = 1;									// linkage learning flag (0-without LinkageLearning; 1-with online LinkageLearning; 2-with offline LinkageLearning)
+double *weightVert_m;								// Mean variable importance vector
+double **Madj_m;									// Mean Adjacency Matrix (2-variable interaction)
+clock_t time_start;									// starting time
+double max_time;									// maximum time for experiments with maximum time
+int flag_best_fitness_002, flag_best_fitness_020, flag_best_fitness_040;				// data to be stored: flag to save best fitness at different times
 
 // Simulador
 int nsteps = 300;

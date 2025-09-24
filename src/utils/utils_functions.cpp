@@ -2,7 +2,6 @@
 // Created by Daniel on 19/09/2025.
 //
 #include <cmath>
-
 #include "../parameters/Parameters.h"
 #include <cstdlib>
 #include <iostream>
@@ -46,25 +45,13 @@ void desaloc_matrixd(double **Matrix, int lines)
 
 double random_dou()
 {
-    // return rand() / static_cast<double>(RAND_MAX); //  random double in [0.0, 1.0]:
-
-    // Gerador estático para não ser recriado toda vez que chamamos a função
-    static random_device rd;
-    static mt19937 gen(rd());
-    static uniform_real_distribution<double> dist(0.0, 1.0);
-
-    return dist(gen);
+    return rand() / static_cast<double>(RAND_MAX); //  random double in [0.0, 1.0]:
 }
 
 
 int random_int(const int L_range, const int H_range)
 {
-    // return static_cast<int>(rand() / (RAND_MAX + 1.0) * (H_range - L_range + 1) + L_range); // random integer beteween [L_range and H_range]
-    static random_device rd;
-    static mt19937 gen(rd());
-
-    uniform_int_distribution<int> dist(L_range, H_range);
-    return dist(gen);
+    return static_cast<int>(rand() / (RAND_MAX + 1.0) * (H_range - L_range + 1) + L_range);
 }
 
 double normEuc(const double *x, const int l)
@@ -120,4 +107,50 @@ double largEig(double **M, int l, int c)
     delete[] x;
 
     return b;
+}
+
+int *aloc_vectori(const int lines)
+{
+    const auto vector = new int[lines];
+
+    return vector;
+}
+
+int **aloc_matrixi(int lines, int collums)
+{
+    const auto Matrix = new int *[lines];
+    for (int i = 0; i < lines; i++)
+    {
+        Matrix[i] = new int[collums];
+    }
+
+    return Matrix;
+}
+
+void desaloc_matrixi(int **Matrix, int lines)
+{
+    for (int i = 0; i < lines; i++)
+    {
+        delete[] Matrix[i];
+    }
+    delete[] Matrix;
+}
+
+void rand_perm_size(const int *inp, int *out, const int size_inp, const int size_out)
+{
+    int *auxv = aloc_vectori(size_inp);
+
+    for (int i = 0; i < size_inp; i++)
+        auxv[i] = inp[i];
+
+    for (int i = 0; i < size_out; i++)
+    {
+        int j = random_int(i, size_inp - 1);
+        const int aux = auxv[i];
+        auxv[i] = auxv[j];
+        auxv[j] = aux;
+        out[i] = auxv[i];
+    }
+
+    delete[] auxv;
 }

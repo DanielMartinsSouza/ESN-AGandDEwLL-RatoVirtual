@@ -86,8 +86,6 @@ void ESN::weights_init() const {
                 W[i][j] = 0;
             else
             {
-                // res_neurons[i].rec[res_neurons[i].n_rec] = j;
-                // res_neurons[i].n_rec += 1;
                 W[i][j] = (max_W - min_W) * random_dou() + min_W;
             }
         }

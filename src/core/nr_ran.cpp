@@ -31,7 +31,6 @@ long double ran1(long *idum)
     long k;
     static long iy = 0;
     static long iv[NTAB];
-    long double temp;
 
     if (*idum <= 0 || !iy) // Initialize.
     {
@@ -62,7 +61,7 @@ long double ran1(long *idum)
     j = iy / NDIV; // Will be in the range 0..NTAB-1.
     iy = iv[j];    // Output previously stored value and re_ll the shu_e table.
     iv[j] = *idum;
-    if ((temp = AM * iy) > RNMX) // Because users don't expect endpoint values.
+    if (long double temp; (temp = AM * iy) > RNMX) // Because users don't expect endpoint values.
         return RNMX;
     else
         return temp;
@@ -75,7 +74,6 @@ long double ran2(long *idum)
     static long idum2 = 123456789;
     static long iy = 0;
     static long iv[NTAB];
-    long double temp;
 
     if (*idum <= 0) // Initialize.
     {
@@ -117,7 +115,7 @@ long double ran2(long *idum)
     if (iy < 1)
         iy += IMM1;
 
-    if ((temp = AM1 * iy) > RNMX) // Because users don't expect endpoint values.
+    if (long double temp; (temp = AM1 * iy) > RNMX) // Because users don't expect endpoint values.
         return RNMX;
     else
         return temp;

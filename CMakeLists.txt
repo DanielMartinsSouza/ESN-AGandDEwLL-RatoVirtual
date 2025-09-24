@@ -22,4 +22,15 @@ add_executable(ESN_AGandDEwLL_RatoVirtual main.cpp
         src/algorithms/AG/geracao.cpp
         src/algorithms/AG/selecao.cpp
         src/algorithms/AG/reproducao.cpp
+        src/core/estVIG2.cpp
+        src/core/estVIG2.h
+        src/algorithms/DE/estatistica.cpp
+        src/algorithms/DE/reproducao.cpp
+        src/algorithms/LinkageLearning/LL.cpp
+        src/core/Graph.cpp
+        src/core/Graph.h
+        src/core/Graph.h
+        src/core/Graph.cpp
+        src/algorithms/DE/estatistica.cpp
+        src/algorithms/DE/DE.cpp
 )
