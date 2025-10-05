@@ -112,6 +112,7 @@ int main_AG() {
     }
     delete[] popVelha.indiv;
     delete[] popNova.indiv;
+    delete esn;
     desaloc_matrixd(arq_melhor_individuo, maxGen + 1);
 
     return 0;

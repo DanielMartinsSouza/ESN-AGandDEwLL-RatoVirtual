@@ -499,7 +499,7 @@ void estVIG2::GbinX(const double *parent1, const double *parent2, double *offspr
 	}
 
 	// Group-wise Binomial Crossover (GbinX)
-	auto comp_set = new int[n_comp];
+	const auto comp_set = new int[n_comp];
 	for (int i = 0; i < n_comp; i++)
 	{
 		if (random_dou() < CR)

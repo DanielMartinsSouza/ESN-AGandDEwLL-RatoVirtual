@@ -18,8 +18,8 @@ int n_examples = 10;
 int tamPop = 100;
 int lcrom = (reservoir_size + 1) * n_out;
 populacao popVelha, popNova;
-int nroMaxExec = 10;//30 // numero de repeticoes do AG
-int maxGen = 100;//500    // numero maximo de geracoes
+int nroMaxExec = 30;//30 // numero de repeticoes do AG
+int maxGen = 500;//500    // numero maximo de geracoes
 bool elitismo = true; // true: elitismo ; false: sem elitismo
 int tamTorneio = 3;   // tamanho do torneio (usado na selecao por torneio)
 double taxaCross = 0.6;       // taxa de crossover

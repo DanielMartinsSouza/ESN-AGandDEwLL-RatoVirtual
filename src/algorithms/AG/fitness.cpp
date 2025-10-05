@@ -144,9 +144,10 @@ double calcFitness(const alelo *indiv)
 				}
 				if (equal)
 				{
+					constexpr double gama = 0.9;
 					const int m_linha = (memory - (step % memory) + m) % memory;
 
-					const double prob = 1 - 0.9 / (memory - m_linha);
+					const double prob = 1 - gama / (memory - m_linha);
 					if (const double r = rand() / static_cast<float>(RAND_MAX); r < prob)
 					{
 						Fitness++;
@@ -172,7 +173,7 @@ double calcFitness(const alelo *indiv)
 
 		if (const double z = rand() / static_cast<float>(RAND_MAX); z < alpha / (sum_in + 1))
 		{
-			constexpr double beta = 0.5;
+			constexpr double beta = 6;
 			Fitness -= beta;
 			perdeuBeta++;
 		}

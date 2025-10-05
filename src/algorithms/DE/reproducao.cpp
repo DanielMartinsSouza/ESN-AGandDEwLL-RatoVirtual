@@ -25,7 +25,7 @@ void mutation_DErand1(alelo * offspring, const int j) {
 
 void mutation_DEbest1(alelo * offspring, const int j) {
     // Selection of the Parents
-    int a = popVelha.melhorIndividuo;
+    const int a = popVelha.melhorIndividuo;
     int b = j;
     while(b==j || b==a)
         b=random_int(0, tamPop-1);

@@ -23,7 +23,7 @@ int main(int argc, char* argv[]) {
     if (string(argv[2]) == "1") {
         cout << "Iniciando execução do DE: " << argv[1] << endl;
         main_DE();
-        cout << "Finalizando execução do AG: " << argv[1] << endl;
+        cout << "Finalizando execução do DE: " << argv[1] << endl;
     }else {
         message("DE");
     }

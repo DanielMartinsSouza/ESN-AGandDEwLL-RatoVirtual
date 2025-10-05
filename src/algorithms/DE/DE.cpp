@@ -44,19 +44,20 @@ int main_DE() {
     bestY = new double[nsteps + 1];
     bestAcoes = new double[nsteps + 1];
 
+    const int seed = time(NULL);
+    // ESN(int reservoir_size, double sparsity, double spectral_radius_d, int n_out, int input_size, int n_examples, int n_stab, int seed)
+    esn = new ESN(reservoir_size, sparsity, spectral_radius_d, n_out, input_size, n_examples, n_stab, seed);
+
     for (int n_run = 0; n_run < nroMaxExec; n_run++) {
 
         /* Teste */
         bestFitness = numeric_limits<double>::min(); // menor double negativo
         random2 = new Random(1, n_run + 1); // semente para gerar os numeros aleatorios
 
-        const int seed = time(NULL);
-        // ESN(int reservoir_size, double sparsity, double spectral_radius_d, int n_out, int input_size, int n_examples, int n_stab, int seed)
-        esn = new ESN(reservoir_size, sparsity, spectral_radius_d, n_out, input_size, n_examples, n_stab, seed);
-
         cout << "Run:" << n_run << ", random seed: " << n_run + 1 << endl;
         srand(n_run + 1); // random seed  (for run)
         de(n_run); // run DE
+        salv_simulacaoDE(n_run);
     }
 
     file_output(nroMaxExec); // save data
@@ -78,6 +79,7 @@ int main_DE() {
     delete[] file_n_edges_eVIG;
     delete[] file_n_edges_eVIG_gen;
     delete[] vsort_aux;
+    delete esn;
 
     cout << "Executando DE" << endl;
 
@@ -142,7 +144,6 @@ void generation_DE(estVIG2 * est_vig2) {
         crossoverDE(y.cromossomo, popVelha.indiv[j].cromossomo, xnew.cromossomo, est_vig2, pdyn);
 
         // Evaluation of the offspring xnew
-        //xnew.fitness = compFitness(xnew.chromosome);
         xnew.fitness = calcFitness(xnew.cromossomo);
 
         // (online) Linkage Learning
@@ -152,11 +153,13 @@ void generation_DE(estVIG2 * est_vig2) {
         if (xnew.fitness > popVelha.indiv[j].fitness) {
             for (int gene = 0; gene < lcrom; gene++)
                 popNova.indiv[j].cromossomo[gene] = xnew.cromossomo[gene];
-            popNova.indiv[j].fitness = xnew.fitness;
+            //popNova.indiv[j].fitness = xnew.fitness;
+            popNova.indiv[j].fitness = calcFitness(popNova.indiv[j].cromossomo);
         } else {
             for (int gene = 0; gene < lcrom; gene++)
                 popNova.indiv[j].cromossomo[gene] = popVelha.indiv[j].cromossomo[gene];
-            popNova.indiv[j].fitness = popVelha.indiv[j].fitness;
+            //popNova.indiv[j].fitness = popVelha.indiv[j].fitness;
+            popNova.indiv[j].fitness = calcFitness(popNova.indiv[j].cromossomo);
         }
 
         j = j + 1;
@@ -196,7 +199,6 @@ void de(const int n_run) {
         statistics(&popVelha, n_run, eVIG_instance->n_edges_eVIG);
 
         print_data(&popVelha);
-        salv_simulacao(n_run);
 
     } while (stop_flag == 0);
 
