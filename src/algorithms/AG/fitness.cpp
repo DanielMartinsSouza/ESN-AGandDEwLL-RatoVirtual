@@ -173,11 +173,11 @@ double calcFitness(const alelo *indiv)
 
 		if (const double z = rand() / static_cast<float>(RAND_MAX); z < alpha / (sum_in + 1))
 		{
-			constexpr double beta = 6;
+			constexpr double beta = 0.5;
 			Fitness -= beta;
 			perdeuBeta++;
 		}
-
+\
 		// Salvar ativações do reservatório e da saída para o passo atual
 		for (int i = 0; i < reservoir_size; i++)
 		{

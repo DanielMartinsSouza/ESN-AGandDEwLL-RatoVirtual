@@ -68,6 +68,19 @@ int main_DE() {
         desaloc_matrixd(Madj_m, lcrom);
         delete[] weightVert_m;
     }
+
+    // Deleting population
+    for (int num_ind = 0; num_ind < tamPop; num_ind++) {
+        delete[] popVelha.indiv[num_ind].cromossomo;
+        delete[] popNova.indiv[num_ind].cromossomo;
+    }
+    delete[] popVelha.indiv;
+    delete[] popNova.indiv;
+    delete[] pX;
+    delete[] pY;
+    delete[] bestX;
+    delete[] bestY;
+    delete[] bestAcoes;
     delete[] time_run;
     delete[] file_gen;
     delete[] file_nfeval;
@@ -80,8 +93,6 @@ int main_DE() {
     delete[] file_n_edges_eVIG_gen;
     delete[] vsort_aux;
     delete esn;
-
-    cout << "Executando DE" << endl;
 
     return 0;
 }
@@ -227,14 +238,5 @@ void de(const int n_run) {
             eVIG_instance->save(Madj_m, weightVert_m, LL_flag, mutation_type, crossover_type);
         }
     }
-
-    // Deleting population
-    for (int num_ind = 0; num_ind < tamPop; num_ind++) {
-        delete[] popVelha.indiv[num_ind].cromossomo;
-        delete[] popNova.indiv[num_ind].cromossomo;
-    }
-    delete[] popVelha.indiv;
-    delete[] popNova.indiv;
-
     delete eVIG_instance;
 }
