@@ -6,7 +6,7 @@
 
 class ESN;
 // Iniciando os Parametros da ESN
-int input_size = 8;
+int input_size = 6;
 int reservoir_size = 25;
 int n_out = 4;
 double spectral_radius_d = 0.95;
@@ -75,7 +75,6 @@ int nRot90;
 int gDireto;
 int gProbMem;
 int pBeta;
-bool act;
 
 // Variaveis para salvar dados da ESN
 double **reservoir_activations_steps = nullptr;

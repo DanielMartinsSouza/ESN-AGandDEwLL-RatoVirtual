@@ -58,6 +58,7 @@ int main_DE() {
         srand(n_run + 1); // random seed  (for run)
         de(n_run); // run DE
         salv_simulacaoDE(n_run);
+        delete random2;
     }
 
     file_output(nroMaxExec); // save data
@@ -148,7 +149,7 @@ void generation_DE(estVIG2 * est_vig2) {
     do {
         const double pdyn = exp(-2.0 * (nfeval - 1.0) / max_nfeval);
         // remember that there are initial fitness evaluations for the offline LinkageLearning
-        // cout<<pdyn<<endl;
+         cout<<pdyn<<endl;
 
         // reproduction
         mutationDE(y.cromossomo, j);
@@ -192,7 +193,6 @@ void de(const int n_run) {
     // Initialization
     time_start = clock();
     stop_flag = 0;
-    max_time = lcrom / 2.0; // used only if stop criterion is time
     nfeval = 0; // number of fitness evaluations
     gen = 0; // generation
     auto *eVIG_instance = new estVIG2(lcrom, CR_DE, LL_flag, crossover_type); // from class estVIG2 (estVIG2.h)
@@ -219,7 +219,7 @@ void de(const int n_run) {
     file_nfeval[n_run] = nfeval;
     // for LinkageLearning
     file_n_edges_eVIG[n_run] = eVIG_instance->n_edges_eVIG;
-    // eVIG_instance->print();
+     eVIG_instance->print();
     if (save_datagen_flag == 1 && LL_flag > 0) {
         for (int i = 0; i < lcrom; i++) {
             weightVert_m[i] += eVIG_instance->weightVert[i];

@@ -81,7 +81,7 @@ extern double *weightVert_m;														  // Mean variable importance vector
 extern double **Madj_m;		                                                          // Mean Adjacency Matrix (2-variable interaction)
 extern clock_t time_start;														      // starting time
 extern double max_time;															      // maximum time for experiments with maximum time
-extern int flag_best_fitness_002, flag_best_fitness_020, flag_best_fitness_040;       // data to be stored: flag to save best fitness at different times
+extern int flag_best_fitness_002, flag_best_fitness_020, flag_best_fitness_040;       // data to be stored: flag to save the best fitness at different times
 
 // AG metodos
 int main_AG();

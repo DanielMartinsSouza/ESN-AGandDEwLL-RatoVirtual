@@ -3,44 +3,41 @@
 //
 #include <ctime>
 #include <iostream>
+#include <limits>
 #include "../../parameters/Parameters.h"
 using namespace std;
 
-void impressao(const populacao *pop, int gen)
-{
+void impressao(const populacao *pop, int gen) {
     cout << "Geracao: " << gen << endl;
     cout << "Individuo com melhor fitness: " << pop->melhorIndividuo << endl;
     cout << "Fitness do melhor Individuo: " << pop->maxFitness << endl;
     cout << "Media do Fitness da geracao: " << pop->mediaFitness << endl
-         << endl
-         << endl;
+            << endl
+            << endl;
 }
 
 void inicializacao(const int nroExec) {
     apaga_arquivos(nroExec);
     int numIndiv = 0;
 
-    while (numIndiv < tamPop)
-    {
-        for (int gene = 0; gene < lcrom; gene++)
-        {
+    while (numIndiv < tamPop) {
+        for (int gene = 0; gene < lcrom; gene++) {
             popVelha.indiv[numIndiv].cromossomo[gene] = random2->nextFloat(-1, 1);
         }
-        popVelha.indiv[numIndiv].fitness = calcFitness(popVelha.indiv[numIndiv].cromossomo); // Armazena Fitness do Individuo
+        popVelha.indiv[numIndiv].fitness = calcFitness(popVelha.indiv[numIndiv].cromossomo);
+        // Armazena Fitness do Individuo
         numIndiv++;
     }
     estatistica(&popVelha, 0);
     impressao(&popVelha, 0);
 }
 
-void algGen(const int nroExec, const int seed)
-{
+void algGen(const int nroExec, const int seed) {
     int gen = 0;
 
     inicializacao(nroExec); // procedimento para inicializa  o das vari veis e da popula  o
 
-    do
-    {
+    do {
         gen = gen + 1; // n mero de gera  es
         geracao();
         estatistica(&popNova, gen);
@@ -55,7 +52,6 @@ void algGen(const int nroExec, const int seed)
 }
 
 int main_AG() {
-
     // Alocacao Dinamica de Memoria
     arq_media_fitness = aloc_vectord(maxGen + 1);
     arq_melhor_fitness = aloc_vectord(maxGen + 1);
@@ -82,12 +78,12 @@ int main_AG() {
 
     for (int nroExec = 0; nroExec < nroMaxExec; nroExec++) {
         nfeval = 0;
-        bestFitness = numeric_limits<double>::min();        // menor double negativo
-        random2 = new Random(1, nroExec + 1);   // semente para gerar os numeros aleatorios
+        bestFitness = numeric_limits<double>::min(); // menor double negativo
+        random2 = new Random(1, nroExec + 1); // semente para gerar os numeros aleatorios
 
         // Visualizacao
         cout << "\tExecucao: " << nroExec << endl
-                << endl;
+        //        << endl;
         algGen(nroExec, seed); // chama a execucao do AG para uma semente aleatoria
 
         delete random2;

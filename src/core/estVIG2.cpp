@@ -393,7 +393,7 @@ void estVIG2::VIntCrossover_DE(const double *parent1, const double *parent2, dou
 		}
 
 		// Step 2: Finding the connected components of G_rec
-		// G_rec->printGraph();
+		 G_rec->printGraph();
 		G_rec->connectedComponents(comp_id);
 
 		int n_comp = 0; // number of components

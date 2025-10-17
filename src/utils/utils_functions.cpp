@@ -12,29 +12,42 @@ using namespace std;
 double *aloc_vectord(const int lines)
 {
     auto *vector = new double[lines];
-
+    if (!vector)
+    {
+        cout << "Allocation Error!" << endl;
+        exit(1);
+    }
     return vector;
 }
 
 individuo *aloc_vectorind(const int lines)
 {
     auto *vector = new individuo[lines];
-
+    if (!vector)
+    {
+        cout << "Allocation Error!" << endl;
+        exit(1);
+    }
     return vector;
 }
 
-double **aloc_matrixd(const int lines, int collums)
+double **aloc_matrixd(const int lines, const int collums)
 {
     auto **Matrix = new double *[lines];
     for (int i = 0; i < lines; i++)
     {
         Matrix[i] = new double[collums];
     }
+    if (!Matrix)
+    {
+        cout << "Allocation Error!" << endl;
+        exit(1);
+    }
 
     return Matrix;
 }
 
-void desaloc_matrixd(double **Matrix, int lines)
+void desaloc_matrixd(double **Matrix, const int lines)
 {
     for (int i = 0; i < lines; i++)
     {
@@ -45,20 +58,21 @@ void desaloc_matrixd(double **Matrix, int lines)
 
 double random_dou()
 {
-    return rand() / static_cast<double>(RAND_MAX); //  random double in [0.0, 1.0]:
+    return (rand() / double(RAND_MAX)); //  random double in [0.0, 1.0]:
 }
 
 
 int random_int(const int L_range, const int H_range)
 {
-    return static_cast<int>(rand() / (RAND_MAX + 1.0) * (H_range - L_range + 1) + L_range);
+    return ((int)((rand() / (RAND_MAX + 1.0)) * (H_range - L_range + 1) + L_range));
 }
 
 double normEuc(const double *x, const int l)
 {
     double norm = 0.0;
+    int i;
 
-    for (int i = 0; i < l; i++)
+    for (i = 0; i < l; i++)
         norm += x[i] * x[i];
 
     return (sqrt(norm));

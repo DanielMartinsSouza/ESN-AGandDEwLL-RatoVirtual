@@ -41,7 +41,7 @@ void Graph::connectedComponents(int *connected_v)
 			// find all reachable vertices from v
 			DFSUtil(v, visited, connected_v, comp_index);
 			comp_index++;
-			// cout <<endl;
+			 cout <<endl;
 		}
 	}
 	delete[] visited;
@@ -51,7 +51,7 @@ void Graph::DFSUtil(const int v, bool visited[], int *connected_v, const int com
 {
 	// Mark the current node as visited
 	visited[v] = true;
-	// cout << v << " ";
+	 cout << v << " ";
 	connected_v[v] = comp_index;
 
 	// Recurrence for all the vertices adjacent to vertex v

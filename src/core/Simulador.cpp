@@ -92,7 +92,7 @@ double *Simulador::readSensor(const int dist) const {
 	sensores[0] = sensor(dist, ang - 45); // direita
 	sensores[1] = sensor(dist, ang);	  // frontal
 	sensores[2] = sensor(dist, ang + 45); // esquerda
-	sensores[3] = 0;					  // cima
+	//sensores[3] = 0;					  // cima
 
 	return sensores;
 } // readSensor

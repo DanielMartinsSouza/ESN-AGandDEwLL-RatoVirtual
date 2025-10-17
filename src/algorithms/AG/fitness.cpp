@@ -29,7 +29,7 @@ double calcFitness(const alelo *indiv)
 	auto *simulador = new Simulador(200, 120);
 	// variaveis
 	constexpr int memory = 10;
-	double prevRd[memory][8];
+	double prevRd[memory][6];
 
 	for (auto & i : prevRd)
 		for (double & j : i)
@@ -55,16 +55,15 @@ double calcFitness(const alelo *indiv)
 	for (int step = 0; step < nsteps; step++)
 	{
 		constexpr double alpha = 0.07;
-		act = false;
 
 		const double *in10 = simulador->readSensor(10);
 		const double *in30 = simulador->readSensor(30);
 
-		auto *in = new double[8];
-		for (int j = 0; j < 4; j++)
+		auto *in = new double[6];
+		for (int j = 0; j < 3; j++)
 		{
 			in[j] = in10[j];
-			in[j + 4] = in30[j];
+			in[j + 3] = in30[j];
 		}
 
 		int sum_in = 0;
@@ -75,21 +74,13 @@ double calcFitness(const alelo *indiv)
 
 		esn->move(in, out);
 
-		// Define qual movimento vai ser executado (movimento correspondete a maior saida)
 		int action = 0;
-		int action2 = 0;
 
 		for (int i = 1; i < n_out; i++)
 		{
 			if (out[i] > out[action])
 			{
-				action2 = action;
 				action = i;
-			}
-			else
-			{
-				if (out[i] > out[action2])
-					action2 = i;
 			}
 		}
 
@@ -97,14 +88,8 @@ double calcFitness(const alelo *indiv)
 
 		simulador->execute(action, 10, acoes, step);
 
-		int acao;
-		if (act)
-			acao = action2;
-		else
-			acao = action;
-
 		// SWITCH
-		switch (acao)
+		switch (action)
 		{
 		case 0:
 			/** Bloco Rotacionar 45° **/
@@ -134,7 +119,7 @@ double calcFitness(const alelo *indiv)
 					m = memory + m;
 
 				equal = 1;
-				for (int s = 0; s < 8; s++)
+				for (int s = 0; s < 6; s++)
 				{
 					if (prevRd[m][s] != in[s])
 					{
@@ -166,7 +151,7 @@ double calcFitness(const alelo *indiv)
 		} // switch
 
 		// memoria do rato - n(memory) ultimas leituras dos sensores (n passos)
-		for (int k = 0; k < 8; k++)
+		for (int k = 0; k < 6; k++)
 			prevRd[step % memory][k] = in[k];
 
 		// srand(time(NULL));
