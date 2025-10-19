@@ -49,7 +49,6 @@ int main_DE() {
     esn = new ESN(reservoir_size, sparsity, spectral_radius_d, n_out, input_size, n_examples, n_stab, seed);
 
     for (int n_run = 0; n_run < nroMaxExec; n_run++) {
-
         /* Teste */
         bestFitness = numeric_limits<double>::min(); // menor double negativo
         random2 = new Random(1, n_run + 1); // semente para gerar os numeros aleatorios
@@ -105,17 +104,16 @@ void inicializacaoDE(const int num_ind) {
     popVelha.indiv[num_ind].fitness = calcFitness(popVelha.indiv[num_ind].cromossomo);
 }
 
-void print_data(const populacao * pop_velha) {
+void print_data(const populacao *pop_velha) {
     cout << "Geracao: " << gen << endl;
     cout << "Individuo com melhor fitness: " << pop_velha->melhorIndividuo << endl;
     cout << "Fitness do melhor Individuo: " << pop_velha->maxFitness << endl;
     cout << "Media do Fitness da geracao: " << pop_velha->mediaFitness << endl
-         << endl
-         << endl;
-
+            << endl
+            << endl;
 }
 
-void initiatePop(const estVIG2 * est_vig2, const int n_run) {
+void initiatePop(const estVIG2 *est_vig2, const int n_run) {
     // Dynamic allocation: populations
     popVelha.indiv = aloc_vectorind(tamPop);
     popNova.indiv = aloc_vectorind(tamPop);
@@ -139,7 +137,7 @@ void initiatePop(const estVIG2 * est_vig2, const int n_run) {
     print_data(&popVelha);
 }
 
-void generation_DE(estVIG2 * est_vig2) {
+void generation_DE(estVIG2 *est_vig2) {
     int j = 0;
     individuo y, xnew;
 
@@ -149,7 +147,7 @@ void generation_DE(estVIG2 * est_vig2) {
     do {
         const double pdyn = exp(-2.0 * (nfeval - 1.0) / max_nfeval);
         // remember that there are initial fitness evaluations for the offline LinkageLearning
-         cout<<pdyn<<endl;
+        //cout<<pdyn<<endl;
 
         // reproduction
         mutationDE(y.cromossomo, j);
@@ -210,7 +208,6 @@ void de(const int n_run) {
         statistics(&popVelha, n_run, eVIG_instance->n_edges_eVIG);
 
         print_data(&popVelha);
-
     } while (stop_flag == 0);
 
     // Data to be saved
@@ -219,7 +216,7 @@ void de(const int n_run) {
     file_nfeval[n_run] = nfeval;
     // for LinkageLearning
     file_n_edges_eVIG[n_run] = eVIG_instance->n_edges_eVIG;
-     eVIG_instance->print();
+    //eVIG_instance->print();
     if (save_datagen_flag == 1 && LL_flag > 0) {
         for (int i = 0; i < lcrom; i++) {
             weightVert_m[i] += eVIG_instance->weightVert[i];

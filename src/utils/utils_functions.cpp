@@ -82,7 +82,7 @@ void multMatrixVect(double *y, double **A, const int l_A, const int c_A, const d
 {
     if (c_A != l_x)
     {
-        cout << "Error - multiplication: size of matrix or vector!" << endl;
+        //cout << "Error - multiplication: size of matrix or vector!" << endl;
         exit(1);
     }
 

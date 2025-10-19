@@ -64,7 +64,7 @@ int main_AG() {
     arq_melhor_individuo = aloc_matrixd(maxGen + 1, lcrom);
 
     // Execucao
-    cout << "***** Algoritmo Genetico *****" << endl;
+    //cout << "***** Algoritmo Genetico *****" << endl;
 
     pX = new double[nsteps + 1];
     pY = new double[nsteps + 1];
@@ -82,17 +82,16 @@ int main_AG() {
         random2 = new Random(1, nroExec + 1); // semente para gerar os numeros aleatorios
 
         // Visualizacao
-        cout << "\tExecucao: " << nroExec << endl
-        //        << endl;
+        cout << "\tExecucao: " << nroExec << endl << endl;
         algGen(nroExec, seed); // chama a execucao do AG para uma semente aleatoria
 
         delete random2;
     }
 
-    cout << "Quantidade de fitness avaliado: " << nfeval << endl;
+    //cout << "Quantidade de fitness avaliado: " << nfeval << endl;
 
     /* Visualizacao */
-    cout << "\tFim do programa!" << endl;
+    //cout << "\tFim do programa!" << endl;
 
     // Desalocacao de Memoria
     delete[] pX;
