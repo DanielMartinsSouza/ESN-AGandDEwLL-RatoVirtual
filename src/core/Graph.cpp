@@ -36,7 +36,7 @@ void Graph::connectedComponents(int *connected_v) {
             // find all reachable vertices from v
             DFSUtil(v, visited, connected_v, comp_index);
             comp_index++;
-            cout << endl;
+            //cout << endl;
         }
     }
     delete[] visited;

@@ -2,7 +2,6 @@
 // Created by Daniel on 19/09/2025.
 //
 #include <cstdlib>
-
 #include "../../parameters/Parameters.h"
 #include "../../core/Simulador.h"
 
@@ -26,6 +25,7 @@ double calcFitness(const alelo *indiv)
 		output_activations_steps[i] = new double[n_out];
 	}
 	double Fitness = 0;
+	// Simulador(const double tamX, const double tamY, const int raio, const double posX, const double posY, const int ang) //Testar a mesma posicao
 	auto *simulador = new Simulador(200, 120);
 	// variaveis
 	constexpr int memory = 10;

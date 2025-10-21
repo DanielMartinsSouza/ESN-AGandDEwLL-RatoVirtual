@@ -3,11 +3,9 @@ project(ESN_AGandDEwLL_RatoVirtual)
 
 set(CMAKE_CXX_STANDARD 20)
 
-# Adicionar flags para compilação e link
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -fsanitize=address -g")
-set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} -fsanitize=address")
+#set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -fsanitize=address")
+#set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} -fsanitize=address")
 
-# Adicionar os arquivos do projeto
 add_executable(ESN_AGandDEwLL_RatoVirtual main.cpp
         src/parameters/Parameters.cpp
         src/parameters/Parameters.h
@@ -39,8 +37,3 @@ add_executable(ESN_AGandDEwLL_RatoVirtual main.cpp
         src/algorithms/DE/estatistica.cpp
         src/algorithms/DE/DE.cpp
 )
-
-# Não se esqueça de adicionar os diretórios para as dependências, se necessário
-# target_include_directories(ESN_AGandDEwLL_RatoVirtual PRIVATE <diretórios>)
-
-# Em CLion, você pode usar as configurações do CMake para rodar a aplicação com o AddressSanitizer ativado.
