@@ -158,7 +158,7 @@ double calcFitness(const alelo *indiv)
 
 		if (const double z = rand() / static_cast<float>(RAND_MAX); z < alpha / (sum_in + 1))
 		{
-			constexpr double beta = 0.5;
+			constexpr double beta = 6;
 			Fitness -= beta;
 			perdeuBeta++;
 		}
