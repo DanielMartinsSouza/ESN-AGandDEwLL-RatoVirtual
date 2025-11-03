@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 4.0)
+cmake_minimum_required(VERSION 3.16)
 project(ESN_AGandDEwLL_RatoVirtual)
 
 set(CMAKE_CXX_STANDARD 20)
@@ -32,8 +32,5 @@ add_executable(ESN_AGandDEwLL_RatoVirtual main.cpp
         src/algorithms/LinkageLearning/LL.cpp
         src/core/Graph.cpp
         src/core/Graph.h
-        src/core/Graph.h
-        src/core/Graph.cpp
-        src/algorithms/DE/estatistica.cpp
         src/algorithms/DE/DE.cpp
 )
