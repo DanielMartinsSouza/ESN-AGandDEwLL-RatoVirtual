@@ -39,7 +39,7 @@ include CMakeFiles/rules.ninja
 #############################################
 # Logical path to working directory; prefix for absolute paths.
 
-cmake_ninja_workdir = C$:/Users/Daniel/Documents/ProjetoPesquisa/ESN-AGandDEwLL-RatoVirtual/cmake-build-debug/
+cmake_ninja_workdir = /home/daniel/Documentos/Daniel_DELL/Documents2/ProjetoPesquisa/ESN-AGandDEwLL-RatoVirtual/cmake-build-debug/
 # =============================================================================
 # Object build statements for EXECUTABLE target ESN_AGandDEwLL_RatoVirtual
 
@@ -49,145 +49,185 @@ cmake_ninja_workdir = C$:/Users/Daniel/Documents/ProjetoPesquisa/ESN-AGandDEwLL-
 
 build cmake_object_order_depends_target_ESN_AGandDEwLL_RatoVirtual: phony || .
 
-build CMakeFiles/ESN_AGandDEwLL_RatoVirtual.dir/main.cpp.obj: CXX_COMPILER__ESN_AGandDEwLL_RatoVirtual_unscanned_Debug C$:/Users/Daniel/Documents/ProjetoPesquisa/ESN-AGandDEwLL-RatoVirtual/main.cpp || cmake_object_order_depends_target_ESN_AGandDEwLL_RatoVirtual
+build CMakeFiles/ESN_AGandDEwLL_RatoVirtual.dir/main.cpp.o: CXX_COMPILER__ESN_AGandDEwLL_RatoVirtual_unscanned_Debug /home/daniel/Documentos/Daniel_DELL/Documents2/ProjetoPesquisa/ESN-AGandDEwLL-RatoVirtual/main.cpp || cmake_object_order_depends_target_ESN_AGandDEwLL_RatoVirtual
   CONFIG = Debug
-  DEP_FILE = CMakeFiles\ESN_AGandDEwLL_RatoVirtual.dir\main.cpp.obj.d
+  DEP_FILE = CMakeFiles/ESN_AGandDEwLL_RatoVirtual.dir/main.cpp.o.d
   FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
-  OBJECT_DIR = CMakeFiles\ESN_AGandDEwLL_RatoVirtual.dir
-  OBJECT_FILE_DIR = CMakeFiles\ESN_AGandDEwLL_RatoVirtual.dir
+  OBJECT_DIR = CMakeFiles/ESN_AGandDEwLL_RatoVirtual.dir
+  OBJECT_FILE_DIR = CMakeFiles/ESN_AGandDEwLL_RatoVirtual.dir
+  TARGET_COMPILE_PDB = CMakeFiles/ESN_AGandDEwLL_RatoVirtual.dir/
+  TARGET_PDB = ESN_AGandDEwLL_RatoVirtual.pdb
 
-build CMakeFiles/ESN_AGandDEwLL_RatoVirtual.dir/src/parameters/Parameters.cpp.obj: CXX_COMPILER__ESN_AGandDEwLL_RatoVirtual_unscanned_Debug C$:/Users/Daniel/Documents/ProjetoPesquisa/ESN-AGandDEwLL-RatoVirtual/src/parameters/Parameters.cpp || cmake_object_order_depends_target_ESN_AGandDEwLL_RatoVirtual
+build CMakeFiles/ESN_AGandDEwLL_RatoVirtual.dir/src/parameters/Parameters.cpp.o: CXX_COMPILER__ESN_AGandDEwLL_RatoVirtual_unscanned_Debug /home/daniel/Documentos/Daniel_DELL/Documents2/ProjetoPesquisa/ESN-AGandDEwLL-RatoVirtual/src/parameters/Parameters.cpp || cmake_object_order_depends_target_ESN_AGandDEwLL_RatoVirtual
   CONFIG = Debug
-  DEP_FILE = CMakeFiles\ESN_AGandDEwLL_RatoVirtual.dir\src\parameters\Parameters.cpp.obj.d
+  DEP_FILE = CMakeFiles/ESN_AGandDEwLL_RatoVirtual.dir/src/parameters/Parameters.cpp.o.d
   FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
-  OBJECT_DIR = CMakeFiles\ESN_AGandDEwLL_RatoVirtual.dir
-  OBJECT_FILE_DIR = CMakeFiles\ESN_AGandDEwLL_RatoVirtual.dir\src\parameters
+  OBJECT_DIR = CMakeFiles/ESN_AGandDEwLL_RatoVirtual.dir
+  OBJECT_FILE_DIR = CMakeFiles/ESN_AGandDEwLL_RatoVirtual.dir/src/parameters
+  TARGET_COMPILE_PDB = CMakeFiles/ESN_AGandDEwLL_RatoVirtual.dir/
+  TARGET_PDB = ESN_AGandDEwLL_RatoVirtual.pdb
 
-build CMakeFiles/ESN_AGandDEwLL_RatoVirtual.dir/src/algorithms/AG/AG.cpp.obj: CXX_COMPILER__ESN_AGandDEwLL_RatoVirtual_unscanned_Debug C$:/Users/Daniel/Documents/ProjetoPesquisa/ESN-AGandDEwLL-RatoVirtual/src/algorithms/AG/AG.cpp || cmake_object_order_depends_target_ESN_AGandDEwLL_RatoVirtual
+build CMakeFiles/ESN_AGandDEwLL_RatoVirtual.dir/src/algorithms/AG/AG.cpp.o: CXX_COMPILER__ESN_AGandDEwLL_RatoVirtual_unscanned_Debug /home/daniel/Documentos/Daniel_DELL/Documents2/ProjetoPesquisa/ESN-AGandDEwLL-RatoVirtual/src/algorithms/AG/AG.cpp || cmake_object_order_depends_target_ESN_AGandDEwLL_RatoVirtual
   CONFIG = Debug
-  DEP_FILE = CMakeFiles\ESN_AGandDEwLL_RatoVirtual.dir\src\algorithms\AG\AG.cpp.obj.d
+  DEP_FILE = CMakeFiles/ESN_AGandDEwLL_RatoVirtual.dir/src/algorithms/AG/AG.cpp.o.d
   FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
-  OBJECT_DIR = CMakeFiles\ESN_AGandDEwLL_RatoVirtual.dir
-  OBJECT_FILE_DIR = CMakeFiles\ESN_AGandDEwLL_RatoVirtual.dir\src\algorithms\AG
+  OBJECT_DIR = CMakeFiles/ESN_AGandDEwLL_RatoVirtual.dir
+  OBJECT_FILE_DIR = CMakeFiles/ESN_AGandDEwLL_RatoVirtual.dir/src/algorithms/AG
+  TARGET_COMPILE_PDB = CMakeFiles/ESN_AGandDEwLL_RatoVirtual.dir/
+  TARGET_PDB = ESN_AGandDEwLL_RatoVirtual.pdb
 
-build CMakeFiles/ESN_AGandDEwLL_RatoVirtual.dir/src/utils/saveFiles.cpp.obj: CXX_COMPILER__ESN_AGandDEwLL_RatoVirtual_unscanned_Debug C$:/Users/Daniel/Documents/ProjetoPesquisa/ESN-AGandDEwLL-RatoVirtual/src/utils/saveFiles.cpp || cmake_object_order_depends_target_ESN_AGandDEwLL_RatoVirtual
+build CMakeFiles/ESN_AGandDEwLL_RatoVirtual.dir/src/utils/saveFiles.cpp.o: CXX_COMPILER__ESN_AGandDEwLL_RatoVirtual_unscanned_Debug /home/daniel/Documentos/Daniel_DELL/Documents2/ProjetoPesquisa/ESN-AGandDEwLL-RatoVirtual/src/utils/saveFiles.cpp || cmake_object_order_depends_target_ESN_AGandDEwLL_RatoVirtual
   CONFIG = Debug
-  DEP_FILE = CMakeFiles\ESN_AGandDEwLL_RatoVirtual.dir\src\utils\saveFiles.cpp.obj.d
+  DEP_FILE = CMakeFiles/ESN_AGandDEwLL_RatoVirtual.dir/src/utils/saveFiles.cpp.o.d
   FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
-  OBJECT_DIR = CMakeFiles\ESN_AGandDEwLL_RatoVirtual.dir
-  OBJECT_FILE_DIR = CMakeFiles\ESN_AGandDEwLL_RatoVirtual.dir\src\utils
+  OBJECT_DIR = CMakeFiles/ESN_AGandDEwLL_RatoVirtual.dir
+  OBJECT_FILE_DIR = CMakeFiles/ESN_AGandDEwLL_RatoVirtual.dir/src/utils
+  TARGET_COMPILE_PDB = CMakeFiles/ESN_AGandDEwLL_RatoVirtual.dir/
+  TARGET_PDB = ESN_AGandDEwLL_RatoVirtual.pdb
 
-build CMakeFiles/ESN_AGandDEwLL_RatoVirtual.dir/src/core/Random.cpp.obj: CXX_COMPILER__ESN_AGandDEwLL_RatoVirtual_unscanned_Debug C$:/Users/Daniel/Documents/ProjetoPesquisa/ESN-AGandDEwLL-RatoVirtual/src/core/Random.cpp || cmake_object_order_depends_target_ESN_AGandDEwLL_RatoVirtual
+build CMakeFiles/ESN_AGandDEwLL_RatoVirtual.dir/src/core/Random.cpp.o: CXX_COMPILER__ESN_AGandDEwLL_RatoVirtual_unscanned_Debug /home/daniel/Documentos/Daniel_DELL/Documents2/ProjetoPesquisa/ESN-AGandDEwLL-RatoVirtual/src/core/Random.cpp || cmake_object_order_depends_target_ESN_AGandDEwLL_RatoVirtual
   CONFIG = Debug
-  DEP_FILE = CMakeFiles\ESN_AGandDEwLL_RatoVirtual.dir\src\core\Random.cpp.obj.d
+  DEP_FILE = CMakeFiles/ESN_AGandDEwLL_RatoVirtual.dir/src/core/Random.cpp.o.d
   FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
-  OBJECT_DIR = CMakeFiles\ESN_AGandDEwLL_RatoVirtual.dir
-  OBJECT_FILE_DIR = CMakeFiles\ESN_AGandDEwLL_RatoVirtual.dir\src\core
+  OBJECT_DIR = CMakeFiles/ESN_AGandDEwLL_RatoVirtual.dir
+  OBJECT_FILE_DIR = CMakeFiles/ESN_AGandDEwLL_RatoVirtual.dir/src/core
+  TARGET_COMPILE_PDB = CMakeFiles/ESN_AGandDEwLL_RatoVirtual.dir/
+  TARGET_PDB = ESN_AGandDEwLL_RatoVirtual.pdb
 
-build CMakeFiles/ESN_AGandDEwLL_RatoVirtual.dir/src/core/nr_ran.cpp.obj: CXX_COMPILER__ESN_AGandDEwLL_RatoVirtual_unscanned_Debug C$:/Users/Daniel/Documents/ProjetoPesquisa/ESN-AGandDEwLL-RatoVirtual/src/core/nr_ran.cpp || cmake_object_order_depends_target_ESN_AGandDEwLL_RatoVirtual
+build CMakeFiles/ESN_AGandDEwLL_RatoVirtual.dir/src/core/nr_ran.cpp.o: CXX_COMPILER__ESN_AGandDEwLL_RatoVirtual_unscanned_Debug /home/daniel/Documentos/Daniel_DELL/Documents2/ProjetoPesquisa/ESN-AGandDEwLL-RatoVirtual/src/core/nr_ran.cpp || cmake_object_order_depends_target_ESN_AGandDEwLL_RatoVirtual
   CONFIG = Debug
-  DEP_FILE = CMakeFiles\ESN_AGandDEwLL_RatoVirtual.dir\src\core\nr_ran.cpp.obj.d
+  DEP_FILE = CMakeFiles/ESN_AGandDEwLL_RatoVirtual.dir/src/core/nr_ran.cpp.o.d
   FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
-  OBJECT_DIR = CMakeFiles\ESN_AGandDEwLL_RatoVirtual.dir
-  OBJECT_FILE_DIR = CMakeFiles\ESN_AGandDEwLL_RatoVirtual.dir\src\core
+  OBJECT_DIR = CMakeFiles/ESN_AGandDEwLL_RatoVirtual.dir
+  OBJECT_FILE_DIR = CMakeFiles/ESN_AGandDEwLL_RatoVirtual.dir/src/core
+  TARGET_COMPILE_PDB = CMakeFiles/ESN_AGandDEwLL_RatoVirtual.dir/
+  TARGET_PDB = ESN_AGandDEwLL_RatoVirtual.pdb
 
-build CMakeFiles/ESN_AGandDEwLL_RatoVirtual.dir/src/algorithms/AG/fitness.cpp.obj: CXX_COMPILER__ESN_AGandDEwLL_RatoVirtual_unscanned_Debug C$:/Users/Daniel/Documents/ProjetoPesquisa/ESN-AGandDEwLL-RatoVirtual/src/algorithms/AG/fitness.cpp || cmake_object_order_depends_target_ESN_AGandDEwLL_RatoVirtual
+build CMakeFiles/ESN_AGandDEwLL_RatoVirtual.dir/src/algorithms/AG/fitness.cpp.o: CXX_COMPILER__ESN_AGandDEwLL_RatoVirtual_unscanned_Debug /home/daniel/Documentos/Daniel_DELL/Documents2/ProjetoPesquisa/ESN-AGandDEwLL-RatoVirtual/src/algorithms/AG/fitness.cpp || cmake_object_order_depends_target_ESN_AGandDEwLL_RatoVirtual
   CONFIG = Debug
-  DEP_FILE = CMakeFiles\ESN_AGandDEwLL_RatoVirtual.dir\src\algorithms\AG\fitness.cpp.obj.d
+  DEP_FILE = CMakeFiles/ESN_AGandDEwLL_RatoVirtual.dir/src/algorithms/AG/fitness.cpp.o.d
   FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
-  OBJECT_DIR = CMakeFiles\ESN_AGandDEwLL_RatoVirtual.dir
-  OBJECT_FILE_DIR = CMakeFiles\ESN_AGandDEwLL_RatoVirtual.dir\src\algorithms\AG
+  OBJECT_DIR = CMakeFiles/ESN_AGandDEwLL_RatoVirtual.dir
+  OBJECT_FILE_DIR = CMakeFiles/ESN_AGandDEwLL_RatoVirtual.dir/src/algorithms/AG
+  TARGET_COMPILE_PDB = CMakeFiles/ESN_AGandDEwLL_RatoVirtual.dir/
+  TARGET_PDB = ESN_AGandDEwLL_RatoVirtual.pdb
 
-build CMakeFiles/ESN_AGandDEwLL_RatoVirtual.dir/src/core/Simulador.cpp.obj: CXX_COMPILER__ESN_AGandDEwLL_RatoVirtual_unscanned_Debug C$:/Users/Daniel/Documents/ProjetoPesquisa/ESN-AGandDEwLL-RatoVirtual/src/core/Simulador.cpp || cmake_object_order_depends_target_ESN_AGandDEwLL_RatoVirtual
+build CMakeFiles/ESN_AGandDEwLL_RatoVirtual.dir/src/core/Simulador.cpp.o: CXX_COMPILER__ESN_AGandDEwLL_RatoVirtual_unscanned_Debug /home/daniel/Documentos/Daniel_DELL/Documents2/ProjetoPesquisa/ESN-AGandDEwLL-RatoVirtual/src/core/Simulador.cpp || cmake_object_order_depends_target_ESN_AGandDEwLL_RatoVirtual
   CONFIG = Debug
-  DEP_FILE = CMakeFiles\ESN_AGandDEwLL_RatoVirtual.dir\src\core\Simulador.cpp.obj.d
+  DEP_FILE = CMakeFiles/ESN_AGandDEwLL_RatoVirtual.dir/src/core/Simulador.cpp.o.d
   FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
-  OBJECT_DIR = CMakeFiles\ESN_AGandDEwLL_RatoVirtual.dir
-  OBJECT_FILE_DIR = CMakeFiles\ESN_AGandDEwLL_RatoVirtual.dir\src\core
+  OBJECT_DIR = CMakeFiles/ESN_AGandDEwLL_RatoVirtual.dir
+  OBJECT_FILE_DIR = CMakeFiles/ESN_AGandDEwLL_RatoVirtual.dir/src/core
+  TARGET_COMPILE_PDB = CMakeFiles/ESN_AGandDEwLL_RatoVirtual.dir/
+  TARGET_PDB = ESN_AGandDEwLL_RatoVirtual.pdb
 
-build CMakeFiles/ESN_AGandDEwLL_RatoVirtual.dir/src/utils/utils_functions.cpp.obj: CXX_COMPILER__ESN_AGandDEwLL_RatoVirtual_unscanned_Debug C$:/Users/Daniel/Documents/ProjetoPesquisa/ESN-AGandDEwLL-RatoVirtual/src/utils/utils_functions.cpp || cmake_object_order_depends_target_ESN_AGandDEwLL_RatoVirtual
+build CMakeFiles/ESN_AGandDEwLL_RatoVirtual.dir/src/utils/utils_functions.cpp.o: CXX_COMPILER__ESN_AGandDEwLL_RatoVirtual_unscanned_Debug /home/daniel/Documentos/Daniel_DELL/Documents2/ProjetoPesquisa/ESN-AGandDEwLL-RatoVirtual/src/utils/utils_functions.cpp || cmake_object_order_depends_target_ESN_AGandDEwLL_RatoVirtual
   CONFIG = Debug
-  DEP_FILE = CMakeFiles\ESN_AGandDEwLL_RatoVirtual.dir\src\utils\utils_functions.cpp.obj.d
+  DEP_FILE = CMakeFiles/ESN_AGandDEwLL_RatoVirtual.dir/src/utils/utils_functions.cpp.o.d
   FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
-  OBJECT_DIR = CMakeFiles\ESN_AGandDEwLL_RatoVirtual.dir
-  OBJECT_FILE_DIR = CMakeFiles\ESN_AGandDEwLL_RatoVirtual.dir\src\utils
+  OBJECT_DIR = CMakeFiles/ESN_AGandDEwLL_RatoVirtual.dir
+  OBJECT_FILE_DIR = CMakeFiles/ESN_AGandDEwLL_RatoVirtual.dir/src/utils
+  TARGET_COMPILE_PDB = CMakeFiles/ESN_AGandDEwLL_RatoVirtual.dir/
+  TARGET_PDB = ESN_AGandDEwLL_RatoVirtual.pdb
 
-build CMakeFiles/ESN_AGandDEwLL_RatoVirtual.dir/src/core/ESN.cpp.obj: CXX_COMPILER__ESN_AGandDEwLL_RatoVirtual_unscanned_Debug C$:/Users/Daniel/Documents/ProjetoPesquisa/ESN-AGandDEwLL-RatoVirtual/src/core/ESN.cpp || cmake_object_order_depends_target_ESN_AGandDEwLL_RatoVirtual
+build CMakeFiles/ESN_AGandDEwLL_RatoVirtual.dir/src/core/ESN.cpp.o: CXX_COMPILER__ESN_AGandDEwLL_RatoVirtual_unscanned_Debug /home/daniel/Documentos/Daniel_DELL/Documents2/ProjetoPesquisa/ESN-AGandDEwLL-RatoVirtual/src/core/ESN.cpp || cmake_object_order_depends_target_ESN_AGandDEwLL_RatoVirtual
   CONFIG = Debug
-  DEP_FILE = CMakeFiles\ESN_AGandDEwLL_RatoVirtual.dir\src\core\ESN.cpp.obj.d
+  DEP_FILE = CMakeFiles/ESN_AGandDEwLL_RatoVirtual.dir/src/core/ESN.cpp.o.d
   FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
-  OBJECT_DIR = CMakeFiles\ESN_AGandDEwLL_RatoVirtual.dir
-  OBJECT_FILE_DIR = CMakeFiles\ESN_AGandDEwLL_RatoVirtual.dir\src\core
+  OBJECT_DIR = CMakeFiles/ESN_AGandDEwLL_RatoVirtual.dir
+  OBJECT_FILE_DIR = CMakeFiles/ESN_AGandDEwLL_RatoVirtual.dir/src/core
+  TARGET_COMPILE_PDB = CMakeFiles/ESN_AGandDEwLL_RatoVirtual.dir/
+  TARGET_PDB = ESN_AGandDEwLL_RatoVirtual.pdb
 
-build CMakeFiles/ESN_AGandDEwLL_RatoVirtual.dir/src/algorithms/AG/estatistica.cpp.obj: CXX_COMPILER__ESN_AGandDEwLL_RatoVirtual_unscanned_Debug C$:/Users/Daniel/Documents/ProjetoPesquisa/ESN-AGandDEwLL-RatoVirtual/src/algorithms/AG/estatistica.cpp || cmake_object_order_depends_target_ESN_AGandDEwLL_RatoVirtual
+build CMakeFiles/ESN_AGandDEwLL_RatoVirtual.dir/src/algorithms/AG/estatistica.cpp.o: CXX_COMPILER__ESN_AGandDEwLL_RatoVirtual_unscanned_Debug /home/daniel/Documentos/Daniel_DELL/Documents2/ProjetoPesquisa/ESN-AGandDEwLL-RatoVirtual/src/algorithms/AG/estatistica.cpp || cmake_object_order_depends_target_ESN_AGandDEwLL_RatoVirtual
   CONFIG = Debug
-  DEP_FILE = CMakeFiles\ESN_AGandDEwLL_RatoVirtual.dir\src\algorithms\AG\estatistica.cpp.obj.d
+  DEP_FILE = CMakeFiles/ESN_AGandDEwLL_RatoVirtual.dir/src/algorithms/AG/estatistica.cpp.o.d
   FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
-  OBJECT_DIR = CMakeFiles\ESN_AGandDEwLL_RatoVirtual.dir
-  OBJECT_FILE_DIR = CMakeFiles\ESN_AGandDEwLL_RatoVirtual.dir\src\algorithms\AG
+  OBJECT_DIR = CMakeFiles/ESN_AGandDEwLL_RatoVirtual.dir
+  OBJECT_FILE_DIR = CMakeFiles/ESN_AGandDEwLL_RatoVirtual.dir/src/algorithms/AG
+  TARGET_COMPILE_PDB = CMakeFiles/ESN_AGandDEwLL_RatoVirtual.dir/
+  TARGET_PDB = ESN_AGandDEwLL_RatoVirtual.pdb
 
-build CMakeFiles/ESN_AGandDEwLL_RatoVirtual.dir/src/algorithms/AG/geracao.cpp.obj: CXX_COMPILER__ESN_AGandDEwLL_RatoVirtual_unscanned_Debug C$:/Users/Daniel/Documents/ProjetoPesquisa/ESN-AGandDEwLL-RatoVirtual/src/algorithms/AG/geracao.cpp || cmake_object_order_depends_target_ESN_AGandDEwLL_RatoVirtual
+build CMakeFiles/ESN_AGandDEwLL_RatoVirtual.dir/src/algorithms/AG/geracao.cpp.o: CXX_COMPILER__ESN_AGandDEwLL_RatoVirtual_unscanned_Debug /home/daniel/Documentos/Daniel_DELL/Documents2/ProjetoPesquisa/ESN-AGandDEwLL-RatoVirtual/src/algorithms/AG/geracao.cpp || cmake_object_order_depends_target_ESN_AGandDEwLL_RatoVirtual
   CONFIG = Debug
-  DEP_FILE = CMakeFiles\ESN_AGandDEwLL_RatoVirtual.dir\src\algorithms\AG\geracao.cpp.obj.d
+  DEP_FILE = CMakeFiles/ESN_AGandDEwLL_RatoVirtual.dir/src/algorithms/AG/geracao.cpp.o.d
   FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
-  OBJECT_DIR = CMakeFiles\ESN_AGandDEwLL_RatoVirtual.dir
-  OBJECT_FILE_DIR = CMakeFiles\ESN_AGandDEwLL_RatoVirtual.dir\src\algorithms\AG
+  OBJECT_DIR = CMakeFiles/ESN_AGandDEwLL_RatoVirtual.dir
+  OBJECT_FILE_DIR = CMakeFiles/ESN_AGandDEwLL_RatoVirtual.dir/src/algorithms/AG
+  TARGET_COMPILE_PDB = CMakeFiles/ESN_AGandDEwLL_RatoVirtual.dir/
+  TARGET_PDB = ESN_AGandDEwLL_RatoVirtual.pdb
 
-build CMakeFiles/ESN_AGandDEwLL_RatoVirtual.dir/src/algorithms/AG/selecao.cpp.obj: CXX_COMPILER__ESN_AGandDEwLL_RatoVirtual_unscanned_Debug C$:/Users/Daniel/Documents/ProjetoPesquisa/ESN-AGandDEwLL-RatoVirtual/src/algorithms/AG/selecao.cpp || cmake_object_order_depends_target_ESN_AGandDEwLL_RatoVirtual
+build CMakeFiles/ESN_AGandDEwLL_RatoVirtual.dir/src/algorithms/AG/selecao.cpp.o: CXX_COMPILER__ESN_AGandDEwLL_RatoVirtual_unscanned_Debug /home/daniel/Documentos/Daniel_DELL/Documents2/ProjetoPesquisa/ESN-AGandDEwLL-RatoVirtual/src/algorithms/AG/selecao.cpp || cmake_object_order_depends_target_ESN_AGandDEwLL_RatoVirtual
   CONFIG = Debug
-  DEP_FILE = CMakeFiles\ESN_AGandDEwLL_RatoVirtual.dir\src\algorithms\AG\selecao.cpp.obj.d
+  DEP_FILE = CMakeFiles/ESN_AGandDEwLL_RatoVirtual.dir/src/algorithms/AG/selecao.cpp.o.d
   FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
-  OBJECT_DIR = CMakeFiles\ESN_AGandDEwLL_RatoVirtual.dir
-  OBJECT_FILE_DIR = CMakeFiles\ESN_AGandDEwLL_RatoVirtual.dir\src\algorithms\AG
+  OBJECT_DIR = CMakeFiles/ESN_AGandDEwLL_RatoVirtual.dir
+  OBJECT_FILE_DIR = CMakeFiles/ESN_AGandDEwLL_RatoVirtual.dir/src/algorithms/AG
+  TARGET_COMPILE_PDB = CMakeFiles/ESN_AGandDEwLL_RatoVirtual.dir/
+  TARGET_PDB = ESN_AGandDEwLL_RatoVirtual.pdb
 
-build CMakeFiles/ESN_AGandDEwLL_RatoVirtual.dir/src/algorithms/AG/reproducao.cpp.obj: CXX_COMPILER__ESN_AGandDEwLL_RatoVirtual_unscanned_Debug C$:/Users/Daniel/Documents/ProjetoPesquisa/ESN-AGandDEwLL-RatoVirtual/src/algorithms/AG/reproducao.cpp || cmake_object_order_depends_target_ESN_AGandDEwLL_RatoVirtual
+build CMakeFiles/ESN_AGandDEwLL_RatoVirtual.dir/src/algorithms/AG/reproducao.cpp.o: CXX_COMPILER__ESN_AGandDEwLL_RatoVirtual_unscanned_Debug /home/daniel/Documentos/Daniel_DELL/Documents2/ProjetoPesquisa/ESN-AGandDEwLL-RatoVirtual/src/algorithms/AG/reproducao.cpp || cmake_object_order_depends_target_ESN_AGandDEwLL_RatoVirtual
   CONFIG = Debug
-  DEP_FILE = CMakeFiles\ESN_AGandDEwLL_RatoVirtual.dir\src\algorithms\AG\reproducao.cpp.obj.d
+  DEP_FILE = CMakeFiles/ESN_AGandDEwLL_RatoVirtual.dir/src/algorithms/AG/reproducao.cpp.o.d
   FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
-  OBJECT_DIR = CMakeFiles\ESN_AGandDEwLL_RatoVirtual.dir
-  OBJECT_FILE_DIR = CMakeFiles\ESN_AGandDEwLL_RatoVirtual.dir\src\algorithms\AG
+  OBJECT_DIR = CMakeFiles/ESN_AGandDEwLL_RatoVirtual.dir
+  OBJECT_FILE_DIR = CMakeFiles/ESN_AGandDEwLL_RatoVirtual.dir/src/algorithms/AG
+  TARGET_COMPILE_PDB = CMakeFiles/ESN_AGandDEwLL_RatoVirtual.dir/
+  TARGET_PDB = ESN_AGandDEwLL_RatoVirtual.pdb
 
-build CMakeFiles/ESN_AGandDEwLL_RatoVirtual.dir/src/core/estVIG2.cpp.obj: CXX_COMPILER__ESN_AGandDEwLL_RatoVirtual_unscanned_Debug C$:/Users/Daniel/Documents/ProjetoPesquisa/ESN-AGandDEwLL-RatoVirtual/src/core/estVIG2.cpp || cmake_object_order_depends_target_ESN_AGandDEwLL_RatoVirtual
+build CMakeFiles/ESN_AGandDEwLL_RatoVirtual.dir/src/core/estVIG2.cpp.o: CXX_COMPILER__ESN_AGandDEwLL_RatoVirtual_unscanned_Debug /home/daniel/Documentos/Daniel_DELL/Documents2/ProjetoPesquisa/ESN-AGandDEwLL-RatoVirtual/src/core/estVIG2.cpp || cmake_object_order_depends_target_ESN_AGandDEwLL_RatoVirtual
   CONFIG = Debug
-  DEP_FILE = CMakeFiles\ESN_AGandDEwLL_RatoVirtual.dir\src\core\estVIG2.cpp.obj.d
+  DEP_FILE = CMakeFiles/ESN_AGandDEwLL_RatoVirtual.dir/src/core/estVIG2.cpp.o.d
   FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
-  OBJECT_DIR = CMakeFiles\ESN_AGandDEwLL_RatoVirtual.dir
-  OBJECT_FILE_DIR = CMakeFiles\ESN_AGandDEwLL_RatoVirtual.dir\src\core
+  OBJECT_DIR = CMakeFiles/ESN_AGandDEwLL_RatoVirtual.dir
+  OBJECT_FILE_DIR = CMakeFiles/ESN_AGandDEwLL_RatoVirtual.dir/src/core
+  TARGET_COMPILE_PDB = CMakeFiles/ESN_AGandDEwLL_RatoVirtual.dir/
+  TARGET_PDB = ESN_AGandDEwLL_RatoVirtual.pdb
 
-build CMakeFiles/ESN_AGandDEwLL_RatoVirtual.dir/src/algorithms/DE/estatistica.cpp.obj: CXX_COMPILER__ESN_AGandDEwLL_RatoVirtual_unscanned_Debug C$:/Users/Daniel/Documents/ProjetoPesquisa/ESN-AGandDEwLL-RatoVirtual/src/algorithms/DE/estatistica.cpp || cmake_object_order_depends_target_ESN_AGandDEwLL_RatoVirtual
+build CMakeFiles/ESN_AGandDEwLL_RatoVirtual.dir/src/algorithms/DE/estatistica.cpp.o: CXX_COMPILER__ESN_AGandDEwLL_RatoVirtual_unscanned_Debug /home/daniel/Documentos/Daniel_DELL/Documents2/ProjetoPesquisa/ESN-AGandDEwLL-RatoVirtual/src/algorithms/DE/estatistica.cpp || cmake_object_order_depends_target_ESN_AGandDEwLL_RatoVirtual
   CONFIG = Debug
-  DEP_FILE = CMakeFiles\ESN_AGandDEwLL_RatoVirtual.dir\src\algorithms\DE\estatistica.cpp.obj.d
+  DEP_FILE = CMakeFiles/ESN_AGandDEwLL_RatoVirtual.dir/src/algorithms/DE/estatistica.cpp.o.d
   FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
-  OBJECT_DIR = CMakeFiles\ESN_AGandDEwLL_RatoVirtual.dir
-  OBJECT_FILE_DIR = CMakeFiles\ESN_AGandDEwLL_RatoVirtual.dir\src\algorithms\DE
+  OBJECT_DIR = CMakeFiles/ESN_AGandDEwLL_RatoVirtual.dir
+  OBJECT_FILE_DIR = CMakeFiles/ESN_AGandDEwLL_RatoVirtual.dir/src/algorithms/DE
+  TARGET_COMPILE_PDB = CMakeFiles/ESN_AGandDEwLL_RatoVirtual.dir/
+  TARGET_PDB = ESN_AGandDEwLL_RatoVirtual.pdb
 
-build CMakeFiles/ESN_AGandDEwLL_RatoVirtual.dir/src/algorithms/DE/reproducao.cpp.obj: CXX_COMPILER__ESN_AGandDEwLL_RatoVirtual_unscanned_Debug C$:/Users/Daniel/Documents/ProjetoPesquisa/ESN-AGandDEwLL-RatoVirtual/src/algorithms/DE/reproducao.cpp || cmake_object_order_depends_target_ESN_AGandDEwLL_RatoVirtual
+build CMakeFiles/ESN_AGandDEwLL_RatoVirtual.dir/src/algorithms/DE/reproducao.cpp.o: CXX_COMPILER__ESN_AGandDEwLL_RatoVirtual_unscanned_Debug /home/daniel/Documentos/Daniel_DELL/Documents2/ProjetoPesquisa/ESN-AGandDEwLL-RatoVirtual/src/algorithms/DE/reproducao.cpp || cmake_object_order_depends_target_ESN_AGandDEwLL_RatoVirtual
   CONFIG = Debug
-  DEP_FILE = CMakeFiles\ESN_AGandDEwLL_RatoVirtual.dir\src\algorithms\DE\reproducao.cpp.obj.d
+  DEP_FILE = CMakeFiles/ESN_AGandDEwLL_RatoVirtual.dir/src/algorithms/DE/reproducao.cpp.o.d
   FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
-  OBJECT_DIR = CMakeFiles\ESN_AGandDEwLL_RatoVirtual.dir
-  OBJECT_FILE_DIR = CMakeFiles\ESN_AGandDEwLL_RatoVirtual.dir\src\algorithms\DE
+  OBJECT_DIR = CMakeFiles/ESN_AGandDEwLL_RatoVirtual.dir
+  OBJECT_FILE_DIR = CMakeFiles/ESN_AGandDEwLL_RatoVirtual.dir/src/algorithms/DE
+  TARGET_COMPILE_PDB = CMakeFiles/ESN_AGandDEwLL_RatoVirtual.dir/
+  TARGET_PDB = ESN_AGandDEwLL_RatoVirtual.pdb
 
-build CMakeFiles/ESN_AGandDEwLL_RatoVirtual.dir/src/algorithms/LinkageLearning/LL.cpp.obj: CXX_COMPILER__ESN_AGandDEwLL_RatoVirtual_unscanned_Debug C$:/Users/Daniel/Documents/ProjetoPesquisa/ESN-AGandDEwLL-RatoVirtual/src/algorithms/LinkageLearning/LL.cpp || cmake_object_order_depends_target_ESN_AGandDEwLL_RatoVirtual
+build CMakeFiles/ESN_AGandDEwLL_RatoVirtual.dir/src/algorithms/LinkageLearning/LL.cpp.o: CXX_COMPILER__ESN_AGandDEwLL_RatoVirtual_unscanned_Debug /home/daniel/Documentos/Daniel_DELL/Documents2/ProjetoPesquisa/ESN-AGandDEwLL-RatoVirtual/src/algorithms/LinkageLearning/LL.cpp || cmake_object_order_depends_target_ESN_AGandDEwLL_RatoVirtual
   CONFIG = Debug
-  DEP_FILE = CMakeFiles\ESN_AGandDEwLL_RatoVirtual.dir\src\algorithms\LinkageLearning\LL.cpp.obj.d
+  DEP_FILE = CMakeFiles/ESN_AGandDEwLL_RatoVirtual.dir/src/algorithms/LinkageLearning/LL.cpp.o.d
   FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
-  OBJECT_DIR = CMakeFiles\ESN_AGandDEwLL_RatoVirtual.dir
-  OBJECT_FILE_DIR = CMakeFiles\ESN_AGandDEwLL_RatoVirtual.dir\src\algorithms\LinkageLearning
+  OBJECT_DIR = CMakeFiles/ESN_AGandDEwLL_RatoVirtual.dir
+  OBJECT_FILE_DIR = CMakeFiles/ESN_AGandDEwLL_RatoVirtual.dir/src/algorithms/LinkageLearning
+  TARGET_COMPILE_PDB = CMakeFiles/ESN_AGandDEwLL_RatoVirtual.dir/
+  TARGET_PDB = ESN_AGandDEwLL_RatoVirtual.pdb
 
-build CMakeFiles/ESN_AGandDEwLL_RatoVirtual.dir/src/core/Graph.cpp.obj: CXX_COMPILER__ESN_AGandDEwLL_RatoVirtual_unscanned_Debug C$:/Users/Daniel/Documents/ProjetoPesquisa/ESN-AGandDEwLL-RatoVirtual/src/core/Graph.cpp || cmake_object_order_depends_target_ESN_AGandDEwLL_RatoVirtual
+build CMakeFiles/ESN_AGandDEwLL_RatoVirtual.dir/src/core/Graph.cpp.o: CXX_COMPILER__ESN_AGandDEwLL_RatoVirtual_unscanned_Debug /home/daniel/Documentos/Daniel_DELL/Documents2/ProjetoPesquisa/ESN-AGandDEwLL-RatoVirtual/src/core/Graph.cpp || cmake_object_order_depends_target_ESN_AGandDEwLL_RatoVirtual
   CONFIG = Debug
-  DEP_FILE = CMakeFiles\ESN_AGandDEwLL_RatoVirtual.dir\src\core\Graph.cpp.obj.d
+  DEP_FILE = CMakeFiles/ESN_AGandDEwLL_RatoVirtual.dir/src/core/Graph.cpp.o.d
   FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
-  OBJECT_DIR = CMakeFiles\ESN_AGandDEwLL_RatoVirtual.dir
-  OBJECT_FILE_DIR = CMakeFiles\ESN_AGandDEwLL_RatoVirtual.dir\src\core
+  OBJECT_DIR = CMakeFiles/ESN_AGandDEwLL_RatoVirtual.dir
+  OBJECT_FILE_DIR = CMakeFiles/ESN_AGandDEwLL_RatoVirtual.dir/src/core
+  TARGET_COMPILE_PDB = CMakeFiles/ESN_AGandDEwLL_RatoVirtual.dir/
+  TARGET_PDB = ESN_AGandDEwLL_RatoVirtual.pdb
 
-build CMakeFiles/ESN_AGandDEwLL_RatoVirtual.dir/src/algorithms/DE/DE.cpp.obj: CXX_COMPILER__ESN_AGandDEwLL_RatoVirtual_unscanned_Debug C$:/Users/Daniel/Documents/ProjetoPesquisa/ESN-AGandDEwLL-RatoVirtual/src/algorithms/DE/DE.cpp || cmake_object_order_depends_target_ESN_AGandDEwLL_RatoVirtual
+build CMakeFiles/ESN_AGandDEwLL_RatoVirtual.dir/src/algorithms/DE/DE.cpp.o: CXX_COMPILER__ESN_AGandDEwLL_RatoVirtual_unscanned_Debug /home/daniel/Documentos/Daniel_DELL/Documents2/ProjetoPesquisa/ESN-AGandDEwLL-RatoVirtual/src/algorithms/DE/DE.cpp || cmake_object_order_depends_target_ESN_AGandDEwLL_RatoVirtual
   CONFIG = Debug
-  DEP_FILE = CMakeFiles\ESN_AGandDEwLL_RatoVirtual.dir\src\algorithms\DE\DE.cpp.obj.d
+  DEP_FILE = CMakeFiles/ESN_AGandDEwLL_RatoVirtual.dir/src/algorithms/DE/DE.cpp.o.d
   FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
-  OBJECT_DIR = CMakeFiles\ESN_AGandDEwLL_RatoVirtual.dir
-  OBJECT_FILE_DIR = CMakeFiles\ESN_AGandDEwLL_RatoVirtual.dir\src\algorithms\DE
+  OBJECT_DIR = CMakeFiles/ESN_AGandDEwLL_RatoVirtual.dir
+  OBJECT_FILE_DIR = CMakeFiles/ESN_AGandDEwLL_RatoVirtual.dir/src/algorithms/DE
+  TARGET_COMPILE_PDB = CMakeFiles/ESN_AGandDEwLL_RatoVirtual.dir/
+  TARGET_PDB = ESN_AGandDEwLL_RatoVirtual.pdb
 
 
 # =============================================================================
@@ -195,25 +235,24 @@ build CMakeFiles/ESN_AGandDEwLL_RatoVirtual.dir/src/algorithms/DE/DE.cpp.obj: CX
 
 
 #############################################
-# Link the executable ESN_AGandDEwLL_RatoVirtual.exe
+# Link the executable ESN_AGandDEwLL_RatoVirtual
 
-build ESN_AGandDEwLL_RatoVirtual.exe: CXX_EXECUTABLE_LINKER__ESN_AGandDEwLL_RatoVirtual_Debug CMakeFiles/ESN_AGandDEwLL_RatoVirtual.dir/main.cpp.obj CMakeFiles/ESN_AGandDEwLL_RatoVirtual.dir/src/parameters/Parameters.cpp.obj CMakeFiles/ESN_AGandDEwLL_RatoVirtual.dir/src/algorithms/AG/AG.cpp.obj CMakeFiles/ESN_AGandDEwLL_RatoVirtual.dir/src/utils/saveFiles.cpp.obj CMakeFiles/ESN_AGandDEwLL_RatoVirtual.dir/src/core/Random.cpp.obj CMakeFiles/ESN_AGandDEwLL_RatoVirtual.dir/src/core/nr_ran.cpp.obj CMakeFiles/ESN_AGandDEwLL_RatoVirtual.dir/src/algorithms/AG/fitness.cpp.obj CMakeFiles/ESN_AGandDEwLL_RatoVirtual.dir/src/core/Simulador.cpp.obj CMakeFiles/ESN_AGandDEwLL_RatoVirtual.dir/src/utils/utils_functions.cpp.obj CMakeFiles/ESN_AGandDEwLL_RatoVirtual.dir/src/core/ESN.cpp.obj CMakeFiles/ESN_AGandDEwLL_RatoVirtual.dir/src/algorithms/AG/estatistica.cpp.obj CMakeFiles/ESN_AGandDEwLL_RatoVirtual.dir/src/algorithms/AG/geracao.cpp.obj CMakeFiles/ESN_AGandDEwLL_RatoVirtual.dir/src/algorithms/AG/selecao.cpp.obj CMakeFiles/ESN_AGandDEwLL_RatoVirtual.dir/src/algorithms/AG/reproducao.cpp.obj CMakeFiles/ESN_AGandDEwLL_RatoVirtual.dir/src/core/estVIG2.cpp.obj CMakeFiles/ESN_AGandDEwLL_RatoVirtual.dir/src/algorithms/DE/estatistica.cpp.obj CMakeFiles/ESN_AGandDEwLL_RatoVirtual.dir/src/algorithms/DE/reproducao.cpp.obj CMakeFiles/ESN_AGandDEwLL_RatoVirtual.dir/src/algorithms/LinkageLearning/LL.cpp.obj CMakeFiles/ESN_AGandDEwLL_RatoVirtual.dir/src/core/Graph.cpp.obj CMakeFiles/ESN_AGandDEwLL_RatoVirtual.dir/src/algorithms/DE/DE.cpp.obj
+build ESN_AGandDEwLL_RatoVirtual: CXX_EXECUTABLE_LINKER__ESN_AGandDEwLL_RatoVirtual_Debug CMakeFiles/ESN_AGandDEwLL_RatoVirtual.dir/main.cpp.o CMakeFiles/ESN_AGandDEwLL_RatoVirtual.dir/src/parameters/Parameters.cpp.o CMakeFiles/ESN_AGandDEwLL_RatoVirtual.dir/src/algorithms/AG/AG.cpp.o CMakeFiles/ESN_AGandDEwLL_RatoVirtual.dir/src/utils/saveFiles.cpp.o CMakeFiles/ESN_AGandDEwLL_RatoVirtual.dir/src/core/Random.cpp.o CMakeFiles/ESN_AGandDEwLL_RatoVirtual.dir/src/core/nr_ran.cpp.o CMakeFiles/ESN_AGandDEwLL_RatoVirtual.dir/src/algorithms/AG/fitness.cpp.o CMakeFiles/ESN_AGandDEwLL_RatoVirtual.dir/src/core/Simulador.cpp.o CMakeFiles/ESN_AGandDEwLL_RatoVirtual.dir/src/utils/utils_functions.cpp.o CMakeFiles/ESN_AGandDEwLL_RatoVirtual.dir/src/core/ESN.cpp.o CMakeFiles/ESN_AGandDEwLL_RatoVirtual.dir/src/algorithms/AG/estatistica.cpp.o CMakeFiles/ESN_AGandDEwLL_RatoVirtual.dir/src/algorithms/AG/geracao.cpp.o CMakeFiles/ESN_AGandDEwLL_RatoVirtual.dir/src/algorithms/AG/selecao.cpp.o CMakeFiles/ESN_AGandDEwLL_RatoVirtual.dir/src/algorithms/AG/reproducao.cpp.o CMakeFiles/ESN_AGandDEwLL_RatoVirtual.dir/src/core/estVIG2.cpp.o CMakeFiles/ESN_AGandDEwLL_RatoVirtual.dir/src/algorithms/DE/estatistica.cpp.o CMakeFiles/ESN_AGandDEwLL_RatoVirtual.dir/src/algorithms/DE/reproducao.cpp.o CMakeFiles/ESN_AGandDEwLL_RatoVirtual.dir/src/algorithms/LinkageLearning/LL.cpp.o CMakeFiles/ESN_AGandDEwLL_RatoVirtual.dir/src/core/Graph.cpp.o CMakeFiles/ESN_AGandDEwLL_RatoVirtual.dir/src/algorithms/DE/DE.cpp.o
   CONFIG = Debug
   FLAGS = -g
-  LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
-  OBJECT_DIR = CMakeFiles\ESN_AGandDEwLL_RatoVirtual.dir
-  POST_BUILD = cd .
-  PRE_LINK = cd .
-  TARGET_FILE = ESN_AGandDEwLL_RatoVirtual.exe
-  TARGET_IMPLIB = libESN_AGandDEwLL_RatoVirtual.dll.a
-  TARGET_PDB = ESN_AGandDEwLL_RatoVirtual.exe.dbg
+  OBJECT_DIR = CMakeFiles/ESN_AGandDEwLL_RatoVirtual.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_COMPILE_PDB = CMakeFiles/ESN_AGandDEwLL_RatoVirtual.dir/
+  TARGET_FILE = ESN_AGandDEwLL_RatoVirtual
+  TARGET_PDB = ESN_AGandDEwLL_RatoVirtual.pdb
 
 
 #############################################
 # Utility command for edit_cache
 
 build CMakeFiles/edit_cache.util: CUSTOM_COMMAND
-  COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D C:\Users\Daniel\Documents\ProjetoPesquisa\ESN-AGandDEwLL-RatoVirtual\cmake-build-debug && "C:\Program Files\JetBrains\CLion 2025.1.3\bin\cmake\win\x64\bin\cmake.exe" -E echo "No interactive CMake dialog available.""
+  COMMAND = cd /home/daniel/Documentos/Daniel_DELL/Documents2/ProjetoPesquisa/ESN-AGandDEwLL-RatoVirtual/cmake-build-debug && /snap/clion/393/bin/cmake/linux/x64/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
   DESC = No interactive CMake dialog available...
   restat = 1
 
@@ -224,7 +263,7 @@ build edit_cache: phony CMakeFiles/edit_cache.util
 # Utility command for rebuild_cache
 
 build CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D C:\Users\Daniel\Documents\ProjetoPesquisa\ESN-AGandDEwLL-RatoVirtual\cmake-build-debug && "C:\Program Files\JetBrains\CLion 2025.1.3\bin\cmake\win\x64\bin\cmake.exe" --regenerate-during-build -SC:\Users\Daniel\Documents\ProjetoPesquisa\ESN-AGandDEwLL-RatoVirtual -BC:\Users\Daniel\Documents\ProjetoPesquisa\ESN-AGandDEwLL-RatoVirtual\cmake-build-debug"
+  COMMAND = cd /home/daniel/Documentos/Daniel_DELL/Documents2/ProjetoPesquisa/ESN-AGandDEwLL-RatoVirtual/cmake-build-debug && /snap/clion/393/bin/cmake/linux/x64/bin/cmake --regenerate-during-build -S/home/daniel/Documentos/Daniel_DELL/Documents2/ProjetoPesquisa/ESN-AGandDEwLL-RatoVirtual -B/home/daniel/Documentos/Daniel_DELL/Documents2/ProjetoPesquisa/ESN-AGandDEwLL-RatoVirtual/cmake-build-debug
   DESC = Running CMake to regenerate build system...
   pool = console
   restat = 1
@@ -234,17 +273,15 @@ build rebuild_cache: phony CMakeFiles/rebuild_cache.util
 # =============================================================================
 # Target aliases.
 
-build ESN_AGandDEwLL_RatoVirtual: phony ESN_AGandDEwLL_RatoVirtual.exe
-
 # =============================================================================
 # Folder targets.
 
 # =============================================================================
 
 #############################################
-# Folder: C:/Users/Daniel/Documents/ProjetoPesquisa/ESN-AGandDEwLL-RatoVirtual/cmake-build-debug
+# Folder: /home/daniel/Documentos/Daniel_DELL/Documents2/ProjetoPesquisa/ESN-AGandDEwLL-RatoVirtual/cmake-build-debug
 
-build all: phony ESN_AGandDEwLL_RatoVirtual.exe
+build all: phony ESN_AGandDEwLL_RatoVirtual
 
 # =============================================================================
 # Built-in targets
@@ -253,14 +290,14 @@ build all: phony ESN_AGandDEwLL_RatoVirtual.exe
 #############################################
 # Re-run CMake if any of its inputs changed.
 
-build build.ninja C$:/Users/Daniel/Documents/ProjetoPesquisa/ESN-AGandDEwLL-RatoVirtual/cmake-build-debug/cmake_install.cmake: RERUN_CMAKE | C$:/Program$ Files/JetBrains/CLion$ 2025.1.3/bin/cmake/win/x64/share/cmake-4.0/Modules/CMakeCInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2025.1.3/bin/cmake/win/x64/share/cmake-4.0/Modules/CMakeCXXInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2025.1.3/bin/cmake/win/x64/share/cmake-4.0/Modules/CMakeCommonLanguageInclude.cmake C$:/Program$ Files/JetBrains/CLion$ 2025.1.3/bin/cmake/win/x64/share/cmake-4.0/Modules/CMakeGenericSystem.cmake C$:/Program$ Files/JetBrains/CLion$ 2025.1.3/bin/cmake/win/x64/share/cmake-4.0/Modules/CMakeInitializeConfigs.cmake C$:/Program$ Files/JetBrains/CLion$ 2025.1.3/bin/cmake/win/x64/share/cmake-4.0/Modules/CMakeLanguageInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2025.1.3/bin/cmake/win/x64/share/cmake-4.0/Modules/CMakeRCInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2025.1.3/bin/cmake/win/x64/share/cmake-4.0/Modules/CMakeSystemSpecificInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2025.1.3/bin/cmake/win/x64/share/cmake-4.0/Modules/CMakeSystemSpecificInitialize.cmake C$:/Program$ Files/JetBrains/CLion$ 2025.1.3/bin/cmake/win/x64/share/cmake-4.0/Modules/Compiler/CMakeCommonCompilerMacros.cmake C$:/Program$ Files/JetBrains/CLion$ 2025.1.3/bin/cmake/win/x64/share/cmake-4.0/Modules/Compiler/GNU-C.cmake C$:/Program$ Files/JetBrains/CLion$ 2025.1.3/bin/cmake/win/x64/share/cmake-4.0/Modules/Compiler/GNU-CXX.cmake C$:/Program$ Files/JetBrains/CLion$ 2025.1.3/bin/cmake/win/x64/share/cmake-4.0/Modules/Compiler/GNU.cmake C$:/Program$ Files/JetBrains/CLion$ 2025.1.3/bin/cmake/win/x64/share/cmake-4.0/Modules/Internal/CMakeCLinkerInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2025.1.3/bin/cmake/win/x64/share/cmake-4.0/Modules/Internal/CMakeCXXLinkerInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2025.1.3/bin/cmake/win/x64/share/cmake-4.0/Modules/Internal/CMakeCommonLinkerInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2025.1.3/bin/cmake/win/x64/share/cmake-4.0/Modules/Linker/GNU-C.cmake C$:/Program$ Files/JetBrains/CLion$ 2025.1.3/bin/cmake/win/x64/share/cmake-4.0/Modules/Linker/GNU-CXX.cmake C$:/Program$ Files/JetBrains/CLion$ 2025.1.3/bin/cmake/win/x64/share/cmake-4.0/Modules/Linker/GNU.cmake C$:/Program$ Files/JetBrains/CLion$ 2025.1.3/bin/cmake/win/x64/share/cmake-4.0/Modules/Platform/Linker/GNU.cmake C$:/Program$ Files/JetBrains/CLion$ 2025.1.3/bin/cmake/win/x64/share/cmake-4.0/Modules/Platform/Linker/Windows-GNU-C.cmake C$:/Program$ Files/JetBrains/CLion$ 2025.1.3/bin/cmake/win/x64/share/cmake-4.0/Modules/Platform/Linker/Windows-GNU-CXX.cmake C$:/Program$ Files/JetBrains/CLion$ 2025.1.3/bin/cmake/win/x64/share/cmake-4.0/Modules/Platform/Linker/Windows-GNU.cmake C$:/Program$ Files/JetBrains/CLion$ 2025.1.3/bin/cmake/win/x64/share/cmake-4.0/Modules/Platform/Windows-GNU-C-ABI.cmake C$:/Program$ Files/JetBrains/CLion$ 2025.1.3/bin/cmake/win/x64/share/cmake-4.0/Modules/Platform/Windows-GNU-C.cmake C$:/Program$ Files/JetBrains/CLion$ 2025.1.3/bin/cmake/win/x64/share/cmake-4.0/Modules/Platform/Windows-GNU-CXX-ABI.cmake C$:/Program$ Files/JetBrains/CLion$ 2025.1.3/bin/cmake/win/x64/share/cmake-4.0/Modules/Platform/Windows-GNU-CXX.cmake C$:/Program$ Files/JetBrains/CLion$ 2025.1.3/bin/cmake/win/x64/share/cmake-4.0/Modules/Platform/Windows-GNU.cmake C$:/Program$ Files/JetBrains/CLion$ 2025.1.3/bin/cmake/win/x64/share/cmake-4.0/Modules/Platform/Windows-Initialize.cmake C$:/Program$ Files/JetBrains/CLion$ 2025.1.3/bin/cmake/win/x64/share/cmake-4.0/Modules/Platform/Windows-windres.cmake C$:/Program$ Files/JetBrains/CLion$ 2025.1.3/bin/cmake/win/x64/share/cmake-4.0/Modules/Platform/Windows.cmake C$:/Program$ Files/JetBrains/CLion$ 2025.1.3/bin/cmake/win/x64/share/cmake-4.0/Modules/Platform/WindowsPaths.cmake C$:/Users/Daniel/Documents/ProjetoPesquisa/ESN-AGandDEwLL-RatoVirtual/CMakeLists.txt CMakeCache.txt CMakeFiles/4.0.2/CMakeCCompiler.cmake CMakeFiles/4.0.2/CMakeCXXCompiler.cmake CMakeFiles/4.0.2/CMakeRCCompiler.cmake CMakeFiles/4.0.2/CMakeSystem.cmake
+build build.ninja /home/daniel/Documentos/Daniel_DELL/Documents2/ProjetoPesquisa/ESN-AGandDEwLL-RatoVirtual/cmake-build-debug/cmake_install.cmake: RERUN_CMAKE | /home/daniel/Documentos/Daniel_DELL/Documents2/ProjetoPesquisa/ESN-AGandDEwLL-RatoVirtual/CMakeLists.txt /snap/clion/393/bin/cmake/linux/x64/share/cmake-4.0/Modules/CMakeCCompiler.cmake.in /snap/clion/393/bin/cmake/linux/x64/share/cmake-4.0/Modules/CMakeCCompilerABI.c /snap/clion/393/bin/cmake/linux/x64/share/cmake-4.0/Modules/CMakeCInformation.cmake /snap/clion/393/bin/cmake/linux/x64/share/cmake-4.0/Modules/CMakeCXXCompiler.cmake.in /snap/clion/393/bin/cmake/linux/x64/share/cmake-4.0/Modules/CMakeCXXCompilerABI.cpp /snap/clion/393/bin/cmake/linux/x64/share/cmake-4.0/Modules/CMakeCXXInformation.cmake /snap/clion/393/bin/cmake/linux/x64/share/cmake-4.0/Modules/CMakeCommonLanguageInclude.cmake /snap/clion/393/bin/cmake/linux/x64/share/cmake-4.0/Modules/CMakeCompilerIdDetection.cmake /snap/clion/393/bin/cmake/linux/x64/share/cmake-4.0/Modules/CMakeDetermineCCompiler.cmake /snap/clion/393/bin/cmake/linux/x64/share/cmake-4.0/Modules/CMakeDetermineCXXCompiler.cmake /snap/clion/393/bin/cmake/linux/x64/share/cmake-4.0/Modules/CMakeDetermineCompiler.cmake /snap/clion/393/bin/cmake/linux/x64/share/cmake-4.0/Modules/CMakeDetermineCompilerABI.cmake /snap/clion/393/bin/cmake/linux/x64/share/cmake-4.0/Modules/CMakeDetermineCompilerId.cmake /snap/clion/393/bin/cmake/linux/x64/share/cmake-4.0/Modules/CMakeDetermineCompilerSupport.cmake /snap/clion/393/bin/cmake/linux/x64/share/cmake-4.0/Modules/CMakeDetermineSystem.cmake /snap/clion/393/bin/cmake/linux/x64/share/cmake-4.0/Modules/CMakeFindBinUtils.cmake /snap/clion/393/bin/cmake/linux/x64/share/cmake-4.0/Modules/CMakeGenericSystem.cmake /snap/clion/393/bin/cmake/linux/x64/share/cmake-4.0/Modules/CMakeInitializeConfigs.cmake /snap/clion/393/bin/cmake/linux/x64/share/cmake-4.0/Modules/CMakeLanguageInformation.cmake /snap/clion/393/bin/cmake/linux/x64/share/cmake-4.0/Modules/CMakeParseImplicitIncludeInfo.cmake /snap/clion/393/bin/cmake/linux/x64/share/cmake-4.0/Modules/CMakeParseImplicitLinkInfo.cmake /snap/clion/393/bin/cmake/linux/x64/share/cmake-4.0/Modules/CMakeParseLibraryArchitecture.cmake /snap/clion/393/bin/cmake/linux/x64/share/cmake-4.0/Modules/CMakeSystem.cmake.in /snap/clion/393/bin/cmake/linux/x64/share/cmake-4.0/Modules/CMakeSystemSpecificInformation.cmake /snap/clion/393/bin/cmake/linux/x64/share/cmake-4.0/Modules/CMakeSystemSpecificInitialize.cmake /snap/clion/393/bin/cmake/linux/x64/share/cmake-4.0/Modules/CMakeTestCCompiler.cmake /snap/clion/393/bin/cmake/linux/x64/share/cmake-4.0/Modules/CMakeTestCXXCompiler.cmake /snap/clion/393/bin/cmake/linux/x64/share/cmake-4.0/Modules/CMakeTestCompilerCommon.cmake /snap/clion/393/bin/cmake/linux/x64/share/cmake-4.0/Modules/Compiler/ADSP-DetermineCompiler.cmake /snap/clion/393/bin/cmake/linux/x64/share/cmake-4.0/Modules/Compiler/ARMCC-DetermineCompiler.cmake /snap/clion/393/bin/cmake/linux/x64/share/cmake-4.0/Modules/Compiler/ARMClang-DetermineCompiler.cmake /snap/clion/393/bin/cmake/linux/x64/share/cmake-4.0/Modules/Compiler/AppleClang-DetermineCompiler.cmake /snap/clion/393/bin/cmake/linux/x64/share/cmake-4.0/Modules/Compiler/Borland-DetermineCompiler.cmake /snap/clion/393/bin/cmake/linux/x64/share/cmake-4.0/Modules/Compiler/Bruce-C-DetermineCompiler.cmake /snap/clion/393/bin/cmake/linux/x64/share/cmake-4.0/Modules/Compiler/CMakeCommonCompilerMacros.cmake /snap/clion/393/bin/cmake/linux/x64/share/cmake-4.0/Modules/Compiler/Clang-DetermineCompiler.cmake /snap/clion/393/bin/cmake/linux/x64/share/cmake-4.0/Modules/Compiler/Clang-DetermineCompilerInternal.cmake /snap/clion/393/bin/cmake/linux/x64/share/cmake-4.0/Modules/Compiler/Compaq-C-DetermineCompiler.cmake /snap/clion/393/bin/cmake/linux/x64/share/cmake-4.0/Modules/Compiler/Compaq-CXX-DetermineCompiler.cmake /snap/clion/393/bin/cmake/linux/x64/share/cmake-4.0/Modules/Compiler/Cray-DetermineCompiler.cmake /snap/clion/393/bin/cmake/linux/x64/share/cmake-4.0/Modules/Compiler/CrayClang-DetermineCompiler.cmake /snap/clion/393/bin/cmake/linux/x64/share/cmake-4.0/Modules/Compiler/Embarcadero-DetermineCompiler.cmake /snap/clion/393/bin/cmake/linux/x64/share/cmake-4.0/Modules/Compiler/Fujitsu-DetermineCompiler.cmake /snap/clion/393/bin/cmake/linux/x64/share/cmake-4.0/Modules/Compiler/FujitsuClang-DetermineCompiler.cmake /snap/clion/393/bin/cmake/linux/x64/share/cmake-4.0/Modules/Compiler/GHS-DetermineCompiler.cmake /snap/clion/393/bin/cmake/linux/x64/share/cmake-4.0/Modules/Compiler/GNU-C-DetermineCompiler.cmake /snap/clion/393/bin/cmake/linux/x64/share/cmake-4.0/Modules/Compiler/GNU-C.cmake /snap/clion/393/bin/cmake/linux/x64/share/cmake-4.0/Modules/Compiler/GNU-CXX-CXXImportStd.cmake /snap/clion/393/bin/cmake/linux/x64/share/cmake-4.0/Modules/Compiler/GNU-CXX-DetermineCompiler.cmake /snap/clion/393/bin/cmake/linux/x64/share/cmake-4.0/Modules/Compiler/GNU-CXX.cmake /snap/clion/393/bin/cmake/linux/x64/share/cmake-4.0/Modules/Compiler/GNU-FindBinUtils.cmake /snap/clion/393/bin/cmake/linux/x64/share/cmake-4.0/Modules/Compiler/GNU.cmake /snap/clion/393/bin/cmake/linux/x64/share/cmake-4.0/Modules/Compiler/HP-C-DetermineCompiler.cmake /snap/clion/393/bin/cmake/linux/x64/share/cmake-4.0/Modules/Compiler/HP-CXX-DetermineCompiler.cmake /snap/clion/393/bin/cmake/linux/x64/share/cmake-4.0/Modules/Compiler/IAR-DetermineCompiler.cmake /snap/clion/393/bin/cmake/linux/x64/share/cmake-4.0/Modules/Compiler/IBMCPP-C-DetermineVersionInternal.cmake /snap/clion/393/bin/cmake/linux/x64/share/cmake-4.0/Modules/Compiler/IBMCPP-CXX-DetermineVersionInternal.cmake /snap/clion/393/bin/cmake/linux/x64/share/cmake-4.0/Modules/Compiler/IBMClang-C-DetermineCompiler.cmake /snap/clion/393/bin/cmake/linux/x64/share/cmake-4.0/Modules/Compiler/IBMClang-CXX-DetermineCompiler.cmake /snap/clion/393/bin/cmake/linux/x64/share/cmake-4.0/Modules/Compiler/Intel-DetermineCompiler.cmake /snap/clion/393/bin/cmake/linux/x64/share/cmake-4.0/Modules/Compiler/IntelLLVM-DetermineCompiler.cmake /snap/clion/393/bin/cmake/linux/x64/share/cmake-4.0/Modules/Compiler/LCC-C-DetermineCompiler.cmake /snap/clion/393/bin/cmake/linux/x64/share/cmake-4.0/Modules/Compiler/LCC-CXX-DetermineCompiler.cmake /snap/clion/393/bin/cmake/linux/x64/share/cmake-4.0/Modules/Compiler/MSVC-DetermineCompiler.cmake /snap/clion/393/bin/cmake/linux/x64/share/cmake-4.0/Modules/Compiler/NVHPC-DetermineCompiler.cmake /snap/clion/393/bin/cmake/linux/x64/share/cmake-4.0/Modules/Compiler/NVIDIA-DetermineCompiler.cmake /snap/clion/393/bin/cmake/linux/x64/share/cmake-4.0/Modules/Compiler/OpenWatcom-DetermineCompiler.cmake /snap/clion/393/bin/cmake/linux/x64/share/cmake-4.0/Modules/Compiler/OrangeC-DetermineCompiler.cmake /snap/clion/393/bin/cmake/linux/x64/share/cmake-4.0/Modules/Compiler/PGI-DetermineCompiler.cmake /snap/clion/393/bin/cmake/linux/x64/share/cmake-4.0/Modules/Compiler/PathScale-DetermineCompiler.cmake /snap/clion/393/bin/cmake/linux/x64/share/cmake-4.0/Modules/Compiler/SCO-DetermineCompiler.cmake /snap/clion/393/bin/cmake/linux/x64/share/cmake-4.0/Modules/Compiler/SDCC-C-DetermineCompiler.cmake /snap/clion/393/bin/cmake/linux/x64/share/cmake-4.0/Modules/Compiler/SunPro-C-DetermineCompiler.cmake /snap/clion/393/bin/cmake/linux/x64/share/cmake-4.0/Modules/Compiler/SunPro-CXX-DetermineCompiler.cmake /snap/clion/393/bin/cmake/linux/x64/share/cmake-4.0/Modules/Compiler/TI-DetermineCompiler.cmake /snap/clion/393/bin/cmake/linux/x64/share/cmake-4.0/Modules/Compiler/TIClang-DetermineCompiler.cmake /snap/clion/393/bin/cmake/linux/x64/share/cmake-4.0/Modules/Compiler/Tasking-DetermineCompiler.cmake /snap/clion/393/bin/cmake/linux/x64/share/cmake-4.0/Modules/Compiler/TinyCC-C-DetermineCompiler.cmake /snap/clion/393/bin/cmake/linux/x64/share/cmake-4.0/Modules/Compiler/VisualAge-C-DetermineCompiler.cmake /snap/clion/393/bin/cmake/linux/x64/share/cmake-4.0/Modules/Compiler/VisualAge-CXX-DetermineCompiler.cmake /snap/clion/393/bin/cmake/linux/x64/share/cmake-4.0/Modules/Compiler/Watcom-DetermineCompiler.cmake /snap/clion/393/bin/cmake/linux/x64/share/cmake-4.0/Modules/Compiler/XL-C-DetermineCompiler.cmake /snap/clion/393/bin/cmake/linux/x64/share/cmake-4.0/Modules/Compiler/XL-CXX-DetermineCompiler.cmake /snap/clion/393/bin/cmake/linux/x64/share/cmake-4.0/Modules/Compiler/XLClang-C-DetermineCompiler.cmake /snap/clion/393/bin/cmake/linux/x64/share/cmake-4.0/Modules/Compiler/XLClang-CXX-DetermineCompiler.cmake /snap/clion/393/bin/cmake/linux/x64/share/cmake-4.0/Modules/Compiler/zOS-C-DetermineCompiler.cmake /snap/clion/393/bin/cmake/linux/x64/share/cmake-4.0/Modules/Compiler/zOS-CXX-DetermineCompiler.cmake /snap/clion/393/bin/cmake/linux/x64/share/cmake-4.0/Modules/Internal/CMakeCLinkerInformation.cmake /snap/clion/393/bin/cmake/linux/x64/share/cmake-4.0/Modules/Internal/CMakeCXXLinkerInformation.cmake /snap/clion/393/bin/cmake/linux/x64/share/cmake-4.0/Modules/Internal/CMakeCommonLinkerInformation.cmake /snap/clion/393/bin/cmake/linux/x64/share/cmake-4.0/Modules/Internal/CMakeDetermineLinkerId.cmake /snap/clion/393/bin/cmake/linux/x64/share/cmake-4.0/Modules/Internal/CMakeInspectCLinker.cmake /snap/clion/393/bin/cmake/linux/x64/share/cmake-4.0/Modules/Internal/CMakeInspectCXXLinker.cmake /snap/clion/393/bin/cmake/linux/x64/share/cmake-4.0/Modules/Internal/FeatureTesting.cmake /snap/clion/393/bin/cmake/linux/x64/share/cmake-4.0/Modules/Linker/GNU-C.cmake /snap/clion/393/bin/cmake/linux/x64/share/cmake-4.0/Modules/Linker/GNU-CXX.cmake /snap/clion/393/bin/cmake/linux/x64/share/cmake-4.0/Modules/Linker/GNU.cmake /snap/clion/393/bin/cmake/linux/x64/share/cmake-4.0/Modules/Platform/Linker/GNU.cmake /snap/clion/393/bin/cmake/linux/x64/share/cmake-4.0/Modules/Platform/Linker/Linux-GNU-C.cmake /snap/clion/393/bin/cmake/linux/x64/share/cmake-4.0/Modules/Platform/Linker/Linux-GNU-CXX.cmake /snap/clion/393/bin/cmake/linux/x64/share/cmake-4.0/Modules/Platform/Linker/Linux-GNU.cmake /snap/clion/393/bin/cmake/linux/x64/share/cmake-4.0/Modules/Platform/Linux-Determine-CXX.cmake /snap/clion/393/bin/cmake/linux/x64/share/cmake-4.0/Modules/Platform/Linux-GNU-C.cmake /snap/clion/393/bin/cmake/linux/x64/share/cmake-4.0/Modules/Platform/Linux-GNU-CXX.cmake /snap/clion/393/bin/cmake/linux/x64/share/cmake-4.0/Modules/Platform/Linux-GNU.cmake /snap/clion/393/bin/cmake/linux/x64/share/cmake-4.0/Modules/Platform/Linux-Initialize.cmake /snap/clion/393/bin/cmake/linux/x64/share/cmake-4.0/Modules/Platform/Linux.cmake /snap/clion/393/bin/cmake/linux/x64/share/cmake-4.0/Modules/Platform/UnixPaths.cmake CMakeCache.txt CMakeFiles/4.0.2/CMakeCCompiler.cmake CMakeFiles/4.0.2/CMakeCXXCompiler.cmake CMakeFiles/4.0.2/CMakeSystem.cmake
   pool = console
 
 
 #############################################
 # A missing CMake input file is not an error.
 
-build C$:/Program$ Files/JetBrains/CLion$ 2025.1.3/bin/cmake/win/x64/share/cmake-4.0/Modules/CMakeCInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2025.1.3/bin/cmake/win/x64/share/cmake-4.0/Modules/CMakeCXXInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2025.1.3/bin/cmake/win/x64/share/cmake-4.0/Modules/CMakeCommonLanguageInclude.cmake C$:/Program$ Files/JetBrains/CLion$ 2025.1.3/bin/cmake/win/x64/share/cmake-4.0/Modules/CMakeGenericSystem.cmake C$:/Program$ Files/JetBrains/CLion$ 2025.1.3/bin/cmake/win/x64/share/cmake-4.0/Modules/CMakeInitializeConfigs.cmake C$:/Program$ Files/JetBrains/CLion$ 2025.1.3/bin/cmake/win/x64/share/cmake-4.0/Modules/CMakeLanguageInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2025.1.3/bin/cmake/win/x64/share/cmake-4.0/Modules/CMakeRCInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2025.1.3/bin/cmake/win/x64/share/cmake-4.0/Modules/CMakeSystemSpecificInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2025.1.3/bin/cmake/win/x64/share/cmake-4.0/Modules/CMakeSystemSpecificInitialize.cmake C$:/Program$ Files/JetBrains/CLion$ 2025.1.3/bin/cmake/win/x64/share/cmake-4.0/Modules/Compiler/CMakeCommonCompilerMacros.cmake C$:/Program$ Files/JetBrains/CLion$ 2025.1.3/bin/cmake/win/x64/share/cmake-4.0/Modules/Compiler/GNU-C.cmake C$:/Program$ Files/JetBrains/CLion$ 2025.1.3/bin/cmake/win/x64/share/cmake-4.0/Modules/Compiler/GNU-CXX.cmake C$:/Program$ Files/JetBrains/CLion$ 2025.1.3/bin/cmake/win/x64/share/cmake-4.0/Modules/Compiler/GNU.cmake C$:/Program$ Files/JetBrains/CLion$ 2025.1.3/bin/cmake/win/x64/share/cmake-4.0/Modules/Internal/CMakeCLinkerInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2025.1.3/bin/cmake/win/x64/share/cmake-4.0/Modules/Internal/CMakeCXXLinkerInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2025.1.3/bin/cmake/win/x64/share/cmake-4.0/Modules/Internal/CMakeCommonLinkerInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2025.1.3/bin/cmake/win/x64/share/cmake-4.0/Modules/Linker/GNU-C.cmake C$:/Program$ Files/JetBrains/CLion$ 2025.1.3/bin/cmake/win/x64/share/cmake-4.0/Modules/Linker/GNU-CXX.cmake C$:/Program$ Files/JetBrains/CLion$ 2025.1.3/bin/cmake/win/x64/share/cmake-4.0/Modules/Linker/GNU.cmake C$:/Program$ Files/JetBrains/CLion$ 2025.1.3/bin/cmake/win/x64/share/cmake-4.0/Modules/Platform/Linker/GNU.cmake C$:/Program$ Files/JetBrains/CLion$ 2025.1.3/bin/cmake/win/x64/share/cmake-4.0/Modules/Platform/Linker/Windows-GNU-C.cmake C$:/Program$ Files/JetBrains/CLion$ 2025.1.3/bin/cmake/win/x64/share/cmake-4.0/Modules/Platform/Linker/Windows-GNU-CXX.cmake C$:/Program$ Files/JetBrains/CLion$ 2025.1.3/bin/cmake/win/x64/share/cmake-4.0/Modules/Platform/Linker/Windows-GNU.cmake C$:/Program$ Files/JetBrains/CLion$ 2025.1.3/bin/cmake/win/x64/share/cmake-4.0/Modules/Platform/Windows-GNU-C-ABI.cmake C$:/Program$ Files/JetBrains/CLion$ 2025.1.3/bin/cmake/win/x64/share/cmake-4.0/Modules/Platform/Windows-GNU-C.cmake C$:/Program$ Files/JetBrains/CLion$ 2025.1.3/bin/cmake/win/x64/share/cmake-4.0/Modules/Platform/Windows-GNU-CXX-ABI.cmake C$:/Program$ Files/JetBrains/CLion$ 2025.1.3/bin/cmake/win/x64/share/cmake-4.0/Modules/Platform/Windows-GNU-CXX.cmake C$:/Program$ Files/JetBrains/CLion$ 2025.1.3/bin/cmake/win/x64/share/cmake-4.0/Modules/Platform/Windows-GNU.cmake C$:/Program$ Files/JetBrains/CLion$ 2025.1.3/bin/cmake/win/x64/share/cmake-4.0/Modules/Platform/Windows-Initialize.cmake C$:/Program$ Files/JetBrains/CLion$ 2025.1.3/bin/cmake/win/x64/share/cmake-4.0/Modules/Platform/Windows-windres.cmake C$:/Program$ Files/JetBrains/CLion$ 2025.1.3/bin/cmake/win/x64/share/cmake-4.0/Modules/Platform/Windows.cmake C$:/Program$ Files/JetBrains/CLion$ 2025.1.3/bin/cmake/win/x64/share/cmake-4.0/Modules/Platform/WindowsPaths.cmake C$:/Users/Daniel/Documents/ProjetoPesquisa/ESN-AGandDEwLL-RatoVirtual/CMakeLists.txt CMakeCache.txt CMakeFiles/4.0.2/CMakeCCompiler.cmake CMakeFiles/4.0.2/CMakeCXXCompiler.cmake CMakeFiles/4.0.2/CMakeRCCompiler.cmake CMakeFiles/4.0.2/CMakeSystem.cmake: phony
+build /home/daniel/Documentos/Daniel_DELL/Documents2/ProjetoPesquisa/ESN-AGandDEwLL-RatoVirtual/CMakeLists.txt /snap/clion/393/bin/cmake/linux/x64/share/cmake-4.0/Modules/CMakeCCompiler.cmake.in /snap/clion/393/bin/cmake/linux/x64/share/cmake-4.0/Modules/CMakeCCompilerABI.c /snap/clion/393/bin/cmake/linux/x64/share/cmake-4.0/Modules/CMakeCInformation.cmake /snap/clion/393/bin/cmake/linux/x64/share/cmake-4.0/Modules/CMakeCXXCompiler.cmake.in /snap/clion/393/bin/cmake/linux/x64/share/cmake-4.0/Modules/CMakeCXXCompilerABI.cpp /snap/clion/393/bin/cmake/linux/x64/share/cmake-4.0/Modules/CMakeCXXInformation.cmake /snap/clion/393/bin/cmake/linux/x64/share/cmake-4.0/Modules/CMakeCommonLanguageInclude.cmake /snap/clion/393/bin/cmake/linux/x64/share/cmake-4.0/Modules/CMakeCompilerIdDetection.cmake /snap/clion/393/bin/cmake/linux/x64/share/cmake-4.0/Modules/CMakeDetermineCCompiler.cmake /snap/clion/393/bin/cmake/linux/x64/share/cmake-4.0/Modules/CMakeDetermineCXXCompiler.cmake /snap/clion/393/bin/cmake/linux/x64/share/cmake-4.0/Modules/CMakeDetermineCompiler.cmake /snap/clion/393/bin/cmake/linux/x64/share/cmake-4.0/Modules/CMakeDetermineCompilerABI.cmake /snap/clion/393/bin/cmake/linux/x64/share/cmake-4.0/Modules/CMakeDetermineCompilerId.cmake /snap/clion/393/bin/cmake/linux/x64/share/cmake-4.0/Modules/CMakeDetermineCompilerSupport.cmake /snap/clion/393/bin/cmake/linux/x64/share/cmake-4.0/Modules/CMakeDetermineSystem.cmake /snap/clion/393/bin/cmake/linux/x64/share/cmake-4.0/Modules/CMakeFindBinUtils.cmake /snap/clion/393/bin/cmake/linux/x64/share/cmake-4.0/Modules/CMakeGenericSystem.cmake /snap/clion/393/bin/cmake/linux/x64/share/cmake-4.0/Modules/CMakeInitializeConfigs.cmake /snap/clion/393/bin/cmake/linux/x64/share/cmake-4.0/Modules/CMakeLanguageInformation.cmake /snap/clion/393/bin/cmake/linux/x64/share/cmake-4.0/Modules/CMakeParseImplicitIncludeInfo.cmake /snap/clion/393/bin/cmake/linux/x64/share/cmake-4.0/Modules/CMakeParseImplicitLinkInfo.cmake /snap/clion/393/bin/cmake/linux/x64/share/cmake-4.0/Modules/CMakeParseLibraryArchitecture.cmake /snap/clion/393/bin/cmake/linux/x64/share/cmake-4.0/Modules/CMakeSystem.cmake.in /snap/clion/393/bin/cmake/linux/x64/share/cmake-4.0/Modules/CMakeSystemSpecificInformation.cmake /snap/clion/393/bin/cmake/linux/x64/share/cmake-4.0/Modules/CMakeSystemSpecificInitialize.cmake /snap/clion/393/bin/cmake/linux/x64/share/cmake-4.0/Modules/CMakeTestCCompiler.cmake /snap/clion/393/bin/cmake/linux/x64/share/cmake-4.0/Modules/CMakeTestCXXCompiler.cmake /snap/clion/393/bin/cmake/linux/x64/share/cmake-4.0/Modules/CMakeTestCompilerCommon.cmake /snap/clion/393/bin/cmake/linux/x64/share/cmake-4.0/Modules/Compiler/ADSP-DetermineCompiler.cmake /snap/clion/393/bin/cmake/linux/x64/share/cmake-4.0/Modules/Compiler/ARMCC-DetermineCompiler.cmake /snap/clion/393/bin/cmake/linux/x64/share/cmake-4.0/Modules/Compiler/ARMClang-DetermineCompiler.cmake /snap/clion/393/bin/cmake/linux/x64/share/cmake-4.0/Modules/Compiler/AppleClang-DetermineCompiler.cmake /snap/clion/393/bin/cmake/linux/x64/share/cmake-4.0/Modules/Compiler/Borland-DetermineCompiler.cmake /snap/clion/393/bin/cmake/linux/x64/share/cmake-4.0/Modules/Compiler/Bruce-C-DetermineCompiler.cmake /snap/clion/393/bin/cmake/linux/x64/share/cmake-4.0/Modules/Compiler/CMakeCommonCompilerMacros.cmake /snap/clion/393/bin/cmake/linux/x64/share/cmake-4.0/Modules/Compiler/Clang-DetermineCompiler.cmake /snap/clion/393/bin/cmake/linux/x64/share/cmake-4.0/Modules/Compiler/Clang-DetermineCompilerInternal.cmake /snap/clion/393/bin/cmake/linux/x64/share/cmake-4.0/Modules/Compiler/Compaq-C-DetermineCompiler.cmake /snap/clion/393/bin/cmake/linux/x64/share/cmake-4.0/Modules/Compiler/Compaq-CXX-DetermineCompiler.cmake /snap/clion/393/bin/cmake/linux/x64/share/cmake-4.0/Modules/Compiler/Cray-DetermineCompiler.cmake /snap/clion/393/bin/cmake/linux/x64/share/cmake-4.0/Modules/Compiler/CrayClang-DetermineCompiler.cmake /snap/clion/393/bin/cmake/linux/x64/share/cmake-4.0/Modules/Compiler/Embarcadero-DetermineCompiler.cmake /snap/clion/393/bin/cmake/linux/x64/share/cmake-4.0/Modules/Compiler/Fujitsu-DetermineCompiler.cmake /snap/clion/393/bin/cmake/linux/x64/share/cmake-4.0/Modules/Compiler/FujitsuClang-DetermineCompiler.cmake /snap/clion/393/bin/cmake/linux/x64/share/cmake-4.0/Modules/Compiler/GHS-DetermineCompiler.cmake /snap/clion/393/bin/cmake/linux/x64/share/cmake-4.0/Modules/Compiler/GNU-C-DetermineCompiler.cmake /snap/clion/393/bin/cmake/linux/x64/share/cmake-4.0/Modules/Compiler/GNU-C.cmake /snap/clion/393/bin/cmake/linux/x64/share/cmake-4.0/Modules/Compiler/GNU-CXX-CXXImportStd.cmake /snap/clion/393/bin/cmake/linux/x64/share/cmake-4.0/Modules/Compiler/GNU-CXX-DetermineCompiler.cmake /snap/clion/393/bin/cmake/linux/x64/share/cmake-4.0/Modules/Compiler/GNU-CXX.cmake /snap/clion/393/bin/cmake/linux/x64/share/cmake-4.0/Modules/Compiler/GNU-FindBinUtils.cmake /snap/clion/393/bin/cmake/linux/x64/share/cmake-4.0/Modules/Compiler/GNU.cmake /snap/clion/393/bin/cmake/linux/x64/share/cmake-4.0/Modules/Compiler/HP-C-DetermineCompiler.cmake /snap/clion/393/bin/cmake/linux/x64/share/cmake-4.0/Modules/Compiler/HP-CXX-DetermineCompiler.cmake /snap/clion/393/bin/cmake/linux/x64/share/cmake-4.0/Modules/Compiler/IAR-DetermineCompiler.cmake /snap/clion/393/bin/cmake/linux/x64/share/cmake-4.0/Modules/Compiler/IBMCPP-C-DetermineVersionInternal.cmake /snap/clion/393/bin/cmake/linux/x64/share/cmake-4.0/Modules/Compiler/IBMCPP-CXX-DetermineVersionInternal.cmake /snap/clion/393/bin/cmake/linux/x64/share/cmake-4.0/Modules/Compiler/IBMClang-C-DetermineCompiler.cmake /snap/clion/393/bin/cmake/linux/x64/share/cmake-4.0/Modules/Compiler/IBMClang-CXX-DetermineCompiler.cmake /snap/clion/393/bin/cmake/linux/x64/share/cmake-4.0/Modules/Compiler/Intel-DetermineCompiler.cmake /snap/clion/393/bin/cmake/linux/x64/share/cmake-4.0/Modules/Compiler/IntelLLVM-DetermineCompiler.cmake /snap/clion/393/bin/cmake/linux/x64/share/cmake-4.0/Modules/Compiler/LCC-C-DetermineCompiler.cmake /snap/clion/393/bin/cmake/linux/x64/share/cmake-4.0/Modules/Compiler/LCC-CXX-DetermineCompiler.cmake /snap/clion/393/bin/cmake/linux/x64/share/cmake-4.0/Modules/Compiler/MSVC-DetermineCompiler.cmake /snap/clion/393/bin/cmake/linux/x64/share/cmake-4.0/Modules/Compiler/NVHPC-DetermineCompiler.cmake /snap/clion/393/bin/cmake/linux/x64/share/cmake-4.0/Modules/Compiler/NVIDIA-DetermineCompiler.cmake /snap/clion/393/bin/cmake/linux/x64/share/cmake-4.0/Modules/Compiler/OpenWatcom-DetermineCompiler.cmake /snap/clion/393/bin/cmake/linux/x64/share/cmake-4.0/Modules/Compiler/OrangeC-DetermineCompiler.cmake /snap/clion/393/bin/cmake/linux/x64/share/cmake-4.0/Modules/Compiler/PGI-DetermineCompiler.cmake /snap/clion/393/bin/cmake/linux/x64/share/cmake-4.0/Modules/Compiler/PathScale-DetermineCompiler.cmake /snap/clion/393/bin/cmake/linux/x64/share/cmake-4.0/Modules/Compiler/SCO-DetermineCompiler.cmake /snap/clion/393/bin/cmake/linux/x64/share/cmake-4.0/Modules/Compiler/SDCC-C-DetermineCompiler.cmake /snap/clion/393/bin/cmake/linux/x64/share/cmake-4.0/Modules/Compiler/SunPro-C-DetermineCompiler.cmake /snap/clion/393/bin/cmake/linux/x64/share/cmake-4.0/Modules/Compiler/SunPro-CXX-DetermineCompiler.cmake /snap/clion/393/bin/cmake/linux/x64/share/cmake-4.0/Modules/Compiler/TI-DetermineCompiler.cmake /snap/clion/393/bin/cmake/linux/x64/share/cmake-4.0/Modules/Compiler/TIClang-DetermineCompiler.cmake /snap/clion/393/bin/cmake/linux/x64/share/cmake-4.0/Modules/Compiler/Tasking-DetermineCompiler.cmake /snap/clion/393/bin/cmake/linux/x64/share/cmake-4.0/Modules/Compiler/TinyCC-C-DetermineCompiler.cmake /snap/clion/393/bin/cmake/linux/x64/share/cmake-4.0/Modules/Compiler/VisualAge-C-DetermineCompiler.cmake /snap/clion/393/bin/cmake/linux/x64/share/cmake-4.0/Modules/Compiler/VisualAge-CXX-DetermineCompiler.cmake /snap/clion/393/bin/cmake/linux/x64/share/cmake-4.0/Modules/Compiler/Watcom-DetermineCompiler.cmake /snap/clion/393/bin/cmake/linux/x64/share/cmake-4.0/Modules/Compiler/XL-C-DetermineCompiler.cmake /snap/clion/393/bin/cmake/linux/x64/share/cmake-4.0/Modules/Compiler/XL-CXX-DetermineCompiler.cmake /snap/clion/393/bin/cmake/linux/x64/share/cmake-4.0/Modules/Compiler/XLClang-C-DetermineCompiler.cmake /snap/clion/393/bin/cmake/linux/x64/share/cmake-4.0/Modules/Compiler/XLClang-CXX-DetermineCompiler.cmake /snap/clion/393/bin/cmake/linux/x64/share/cmake-4.0/Modules/Compiler/zOS-C-DetermineCompiler.cmake /snap/clion/393/bin/cmake/linux/x64/share/cmake-4.0/Modules/Compiler/zOS-CXX-DetermineCompiler.cmake /snap/clion/393/bin/cmake/linux/x64/share/cmake-4.0/Modules/Internal/CMakeCLinkerInformation.cmake /snap/clion/393/bin/cmake/linux/x64/share/cmake-4.0/Modules/Internal/CMakeCXXLinkerInformation.cmake /snap/clion/393/bin/cmake/linux/x64/share/cmake-4.0/Modules/Internal/CMakeCommonLinkerInformation.cmake /snap/clion/393/bin/cmake/linux/x64/share/cmake-4.0/Modules/Internal/CMakeDetermineLinkerId.cmake /snap/clion/393/bin/cmake/linux/x64/share/cmake-4.0/Modules/Internal/CMakeInspectCLinker.cmake /snap/clion/393/bin/cmake/linux/x64/share/cmake-4.0/Modules/Internal/CMakeInspectCXXLinker.cmake /snap/clion/393/bin/cmake/linux/x64/share/cmake-4.0/Modules/Internal/FeatureTesting.cmake /snap/clion/393/bin/cmake/linux/x64/share/cmake-4.0/Modules/Linker/GNU-C.cmake /snap/clion/393/bin/cmake/linux/x64/share/cmake-4.0/Modules/Linker/GNU-CXX.cmake /snap/clion/393/bin/cmake/linux/x64/share/cmake-4.0/Modules/Linker/GNU.cmake /snap/clion/393/bin/cmake/linux/x64/share/cmake-4.0/Modules/Platform/Linker/GNU.cmake /snap/clion/393/bin/cmake/linux/x64/share/cmake-4.0/Modules/Platform/Linker/Linux-GNU-C.cmake /snap/clion/393/bin/cmake/linux/x64/share/cmake-4.0/Modules/Platform/Linker/Linux-GNU-CXX.cmake /snap/clion/393/bin/cmake/linux/x64/share/cmake-4.0/Modules/Platform/Linker/Linux-GNU.cmake /snap/clion/393/bin/cmake/linux/x64/share/cmake-4.0/Modules/Platform/Linux-Determine-CXX.cmake /snap/clion/393/bin/cmake/linux/x64/share/cmake-4.0/Modules/Platform/Linux-GNU-C.cmake /snap/clion/393/bin/cmake/linux/x64/share/cmake-4.0/Modules/Platform/Linux-GNU-CXX.cmake /snap/clion/393/bin/cmake/linux/x64/share/cmake-4.0/Modules/Platform/Linux-GNU.cmake /snap/clion/393/bin/cmake/linux/x64/share/cmake-4.0/Modules/Platform/Linux-Initialize.cmake /snap/clion/393/bin/cmake/linux/x64/share/cmake-4.0/Modules/Platform/Linux.cmake /snap/clion/393/bin/cmake/linux/x64/share/cmake-4.0/Modules/Platform/UnixPaths.cmake CMakeCache.txt CMakeFiles/4.0.2/CMakeCCompiler.cmake CMakeFiles/4.0.2/CMakeCXXCompiler.cmake CMakeFiles/4.0.2/CMakeSystem.cmake: phony
 
 
 #############################################
