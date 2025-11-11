@@ -7,7 +7,7 @@
 class ESN;
 // Iniciando os Parametros da ESN
 int input_size = 6;
-int reservoir_size = 25;
+int reservoir_size = 12;
 int n_out = 4;
 double spectral_radius_d = 0.95;
 double sparsity = 0.1;

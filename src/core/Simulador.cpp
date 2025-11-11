@@ -9,11 +9,8 @@ Simulador::Simulador(const double tamX, const double tamY)
 	this->tamX = tamX;
 	this->tamY = tamY;
 	this->raio = 10;
-	/*this->posX = 1.0 * random_int(raio + 5, tamX - (raio + 5));
-	this->posY = 1.0 * random_int(raio + 5, tamY - (raio + 5));
-	this->ang = 45 * random_int(0, 7);*/
-	this->posX = tamX / 2.0;
-	this->posY = tamY / 2.0;
+	this->posX = tamX / 2;
+	this->posY = tamY / 2;
 	this->ang  = 0;
 	pX[0] = this->posX;
 	pY[0] = this->posY;
