@@ -4,7 +4,7 @@
 
 #include "nr_ran.h"
 
-long double ran0(long *idum)
+long double ran0(long* idum)
 {
     *idum ^= MASK; // XORing with MASK allows use of zero and other
     // simple bit patterns for idum.
@@ -25,7 +25,7 @@ long double ran0(long *idum)
     return ans;
 }
 
-long double ran1(long *idum)
+long double ran1(long* idum)
 {
     int j;
     long k;
@@ -52,14 +52,14 @@ long double ran1(long *idum)
         iy = iv[0];
     }
 
-    k = (*idum) / IQ;                       // Start here when not initializing.
+    k = (*idum) / IQ; // Start here when not initializing.
     *idum = IA * (*idum - k * IQ) - IR * k; // Compute idum=(IA*idum) % IM without over-
     // flows by Schrage's method.
     if (*idum < 0)
         *idum += IM;
 
     j = iy / NDIV; // Will be in the range 0..NTAB-1.
-    iy = iv[j];    // Output previously stored value and re_ll the shu_e table.
+    iy = iv[j]; // Output previously stored value and re_ll the shu_e table.
     iv[j] = *idum;
     if (long double temp; (temp = AM * iy) > RNMX) // Because users don't expect endpoint values.
         return RNMX;
@@ -67,7 +67,7 @@ long double ran1(long *idum)
         return temp;
 }
 
-long double ran2(long *idum)
+long double ran2(long* idum)
 {
     int j;
     long k;
@@ -96,7 +96,7 @@ long double ran2(long *idum)
         iy = iv[0];
     }
 
-    k = (*idum) / IQ1;                         // Start here when not initializing.
+    k = (*idum) / IQ1; // Start here when not initializing.
     *idum = IA1 * (*idum - k * IQ1) - k * IR1; // Compute idum=(IA1*idum) % IM1 without
     // overflows by Schrage's method.
     if (*idum < 0)
@@ -107,7 +107,7 @@ long double ran2(long *idum)
     if (idum2 < 0)
         idum2 += IM2;
 
-    j = iy / NDIV1;     // Will be in the range 0..NTAB-1.
+    j = iy / NDIV1; // Will be in the range 0..NTAB-1.
     iy = iv[j] - idum2; // Here idum is shu_ed, idum and idum2 are
     // combined to generate output.
     iv[j] = *idum;

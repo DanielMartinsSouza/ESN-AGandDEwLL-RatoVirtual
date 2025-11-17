@@ -4,14 +4,14 @@
 
 #include "../../parameters/Parameters.h"
 
-void estatistica(populacao *pop, const int gen)
+void estatistica(populacao* pop, const int gen)
 {
     int j;
 
     pop->somaFitness = pop->indiv[0].fitness; // soma do fitness da populacao
-    pop->maxFitness = pop->indiv[0].fitness;  // maximo valor de fitness da populacao
-    pop->melhorIndividuo = 0;				  // melhor individuo da populacao
-    pop->melhorIndividuo2 = 0;				  // segundo melhor individuo da populacao
+    pop->maxFitness = pop->indiv[0].fitness; // maximo valor de fitness da populacao
+    pop->melhorIndividuo = 0; // melhor individuo da populacao
+    pop->melhorIndividuo2 = 0; // segundo melhor individuo da populacao
 
     for (j = 1; j < tamPop; j++)
     {

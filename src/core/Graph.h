@@ -7,10 +7,12 @@
 #include <list>
 
 using namespace std;
-class Graph {
+
+class Graph
+{
     int V; // Number of vertices
-    list<int> *adj; // Points to adjacency list
-    void DFSUtil(int v, bool visited[], int *connected_v, int comp_index);
+    list<int>* adj; // Points to adjacency list
+    void DFSUtil(int v, bool visited[], int* connected_v, int comp_index);
 
 public:
     explicit Graph(int V);
@@ -21,7 +23,7 @@ public:
 
     void addDirectedEdge(int v, int w) const;
 
-    void connectedComponents(int *connected_v);
+    void connectedComponents(int* connected_v);
 
     [[nodiscard]] int isThereEdge(int v, int w) const;
 

@@ -15,16 +15,16 @@ Random::Random(const int function, const long seed)
 
     switch (function)
     {
-        case RAN0:
-            ran = ran0;
-            break;
-        case RAN1:
-            *idum *= (seed > 0) ? -1 : 1; // guarantees idum < 0.
-            ran = ran1;
-            break;
-        case RAN2:
-            ran = ran2;
-        default: ;
+    case RAN0:
+        ran = ran0;
+        break;
+    case RAN1:
+        *idum *= (seed > 0) ? -1 : 1; // guarantees idum < 0.
+        ran = ran1;
+        break;
+    case RAN2:
+        ran = ran2;
+    default: ;
     }
 }
 
@@ -61,7 +61,8 @@ long double Random::nextGaussian(const long double m, const long double sd)
             x1 = 2.0 * nextFloat() - 1.0;
             x2 = 2.0 * nextFloat() - 1.0;
             w = x1 * x1 + x2 * x2;
-        } while (w >= 1.0 || w == 0);
+        }
+        while (w >= 1.0 || w == 0);
 
         w = sqrt((-2.0 * log(w)) / w);
         next = x1 * w;
@@ -77,10 +78,12 @@ long double Random::nextFloat(const long double min, const long double max) cons
     return nextFloat() * (max - min) + min;
 }
 
-long double Random::nextFloat() const {
+long double Random::nextFloat() const
+{
     return (*ran)(idum);
 }
 
-long Random::getidum() const {
+long Random::getidum() const
+{
     return *idum;
 }

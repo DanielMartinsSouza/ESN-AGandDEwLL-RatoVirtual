@@ -27,8 +27,8 @@
 #define EPS 1.2e-7
 #define RNMX (1.0 - EPS)
 
-long double ran0(long *idum);
-long double ran1(long *idum); // call to this function must have idum < 0.
-long double ran2(long *idum);
+long double ran0(long* idum);
+long double ran1(long* idum); // call to this function must have idum < 0.
+long double ran2(long* idum);
 
 #endif //ESN_AGANDDEWLL_RATOVIRTUAL_NR_RAN_H

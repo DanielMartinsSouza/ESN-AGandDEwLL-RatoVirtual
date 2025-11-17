@@ -10,7 +10,7 @@ double mutacao(const alelo valorAlelo)
     return valorAlelo;
 }
 
-void crossover(const alelo *pai1, const alelo *pai2, alelo *filho1, alelo *filho2, const int j)
+void crossover(const alelo* pai1, const alelo* pai2, alelo* filho1, alelo* filho2, const int j)
 {
     int cruzamento1 = 0, cruzamento2 = 0;
 

@@ -9,7 +9,8 @@
 #define RAN1 1
 #define RAN2 2
 
-class Random {
+class Random
+{
 public:
     Random(int function, long seed);
     ~Random();
@@ -22,8 +23,8 @@ public:
     [[nodiscard]] long getidum() const;
 
 private:
-    long double (*ran)(long *idum);
-    long *idum;
+    long double (*ran)(long* idum);
+    long* idum;
 
     bool hasNextGaussian;
     float nextNextGaussian{};

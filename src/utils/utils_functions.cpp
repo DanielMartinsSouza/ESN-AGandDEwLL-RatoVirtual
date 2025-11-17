@@ -9,9 +9,9 @@
 
 using namespace std;
 
-double *aloc_vectord(const int lines)
+double* aloc_vectord(const int lines)
 {
-    auto *vector = new double[lines];
+    auto* vector = new double[lines];
     if (!vector)
     {
         cout << "Allocation Error!" << endl;
@@ -20,9 +20,9 @@ double *aloc_vectord(const int lines)
     return vector;
 }
 
-individuo *aloc_vectorind(const int lines)
+individuo* aloc_vectorind(const int lines)
 {
-    auto *vector = new individuo[lines];
+    auto* vector = new individuo[lines];
     if (!vector)
     {
         cout << "Allocation Error!" << endl;
@@ -31,9 +31,9 @@ individuo *aloc_vectorind(const int lines)
     return vector;
 }
 
-double **aloc_matrixd(const int lines, const int collums)
+double** aloc_matrixd(const int lines, const int collums)
 {
-    auto **Matrix = new double *[lines];
+    auto** Matrix = new double*[lines];
     for (int i = 0; i < lines; i++)
     {
         Matrix[i] = new double[collums];
@@ -47,7 +47,7 @@ double **aloc_matrixd(const int lines, const int collums)
     return Matrix;
 }
 
-void desaloc_matrixd(double **Matrix, const int lines)
+void desaloc_matrixd(double** Matrix, const int lines)
 {
     for (int i = 0; i < lines; i++)
     {
@@ -67,7 +67,7 @@ int random_int(const int L_range, const int H_range)
     return ((int)((rand() / (RAND_MAX + 1.0)) * (H_range - L_range + 1) + L_range));
 }
 
-double normEuc(const double *x, const int l)
+double normEuc(const double* x, const int l)
 {
     double norm = 0.0;
     int i;
@@ -78,7 +78,7 @@ double normEuc(const double *x, const int l)
     return (sqrt(norm));
 }
 
-void multMatrixVect(double *y, double **A, const int l_A, const int c_A, const double *x, const int l_x)
+void multMatrixVect(double* y, double** A, const int l_A, const int c_A, const double* x, const int l_x)
 {
     if (c_A != l_x)
     {
@@ -96,13 +96,13 @@ void multMatrixVect(double *y, double **A, const int l_A, const int c_A, const d
     }
 }
 
-double largEig(double **M, int l, int c)
+double largEig(double** M, int l, int c)
 {
     int i;
     double temp;
 
-    double *x = aloc_vectord(c);
-    double *y = aloc_vectord(c);
+    double* x = aloc_vectord(c);
+    double* y = aloc_vectord(c);
 
     for (i = 0; i < c; i++)
         x[i] = 1.0;
@@ -114,8 +114,8 @@ double largEig(double **M, int l, int c)
         b = normEuc(y, c); // ||y||
         for (i = 0; i < c; i++)
             x[i] = y[i] / b;
-
-    } while (fabs(b - temp) > 0.0001);
+    }
+    while (fabs(b - temp) > 0.0001);
 
     delete[] y;
     delete[] x;
@@ -123,16 +123,16 @@ double largEig(double **M, int l, int c)
     return b;
 }
 
-int *aloc_vectori(const int lines)
+int* aloc_vectori(const int lines)
 {
     const auto vector = new int[lines];
 
     return vector;
 }
 
-int **aloc_matrixi(int lines, int collums)
+int** aloc_matrixi(int lines, int collums)
 {
-    const auto Matrix = new int *[lines];
+    const auto Matrix = new int*[lines];
     for (int i = 0; i < lines; i++)
     {
         Matrix[i] = new int[collums];
@@ -141,7 +141,7 @@ int **aloc_matrixi(int lines, int collums)
     return Matrix;
 }
 
-void desaloc_matrixi(int **Matrix, int lines)
+void desaloc_matrixi(int** Matrix, int lines)
 {
     for (int i = 0; i < lines; i++)
     {
@@ -150,9 +150,9 @@ void desaloc_matrixi(int **Matrix, int lines)
     delete[] Matrix;
 }
 
-void rand_perm_size(const int *inp, int *out, const int size_inp, const int size_out)
+void rand_perm_size(const int* inp, int* out, const int size_inp, const int size_out)
 {
-    int *auxv = aloc_vectori(size_inp);
+    int* auxv = aloc_vectori(size_inp);
 
     for (int i = 0; i < size_inp; i++)
         auxv[i] = inp[i];
