@@ -9,8 +9,8 @@ Simulador::Simulador(const double tamX, const double tamY)
     this->tamX = tamX;
     this->tamY = tamY;
     this->raio = 10;
-    this->posX = tamX / 2;
-    this->posY = tamY / 2;
+    this->posX = 100;
+    this->posY = 60;
     this->ang = 0;
     pX[0] = this->posX;
     pY[0] = this->posY;
