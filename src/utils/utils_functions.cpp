@@ -58,13 +58,13 @@ void desaloc_matrixd(double** Matrix, const int lines)
 
 double random_dou()
 {
-    return (rand() / double(RAND_MAX)); //  random double in [0.0, 1.0]:
+    return (rand() / static_cast<double>(RAND_MAX)); //  random double in [0.0, 1.0]:
 }
 
 
 int random_int(const int L_range, const int H_range)
 {
-    return ((int)((rand() / (RAND_MAX + 1.0)) * (H_range - L_range + 1) + L_range));
+    return static_cast<int>((rand() / (RAND_MAX + 1.0)) * (H_range - L_range + 1) + L_range);
 }
 
 double normEuc(const double* x, const int l)

@@ -1,2 +1,0 @@
-nRot45;nRotInv45;nRot90;nForward;gDireto;gProbMem;pBeta;nsteps
-49;0;73;178;143;18;0;300

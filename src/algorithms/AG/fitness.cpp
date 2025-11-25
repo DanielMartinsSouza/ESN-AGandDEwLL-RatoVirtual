@@ -155,7 +155,7 @@ double calcFitness(const alelo* indiv)
         for (int k = 0; k < 6; k++)
             prevRd[step % memory][k] = in[k];
 
-        // srand(time(NULL));
+        //srand(time(NULL));
 
         if (const double z = rand() / static_cast<float>(RAND_MAX); z < alpha / (sum_in + 1))
         {
