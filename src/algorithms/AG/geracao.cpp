@@ -3,12 +3,10 @@
 //
 #include "../../parameters/Parameters.h"
 
-void geracao()
-{
+void geracao() {
     int j = 0;
 
-    do
-    {
+    do {
         // Escolha dos Pais
         const int pai1 = selecao(&popVelha, j);
         const int pai2 = selecao(&popVelha, j + 1);
@@ -27,6 +25,5 @@ void geracao()
         popNova.indiv[j + 1].pai2 = pai2; // pai 2 do filho j+1
 
         j = j + 2; // incremento do  ndice do individuo
-    }
-    while (j < tamPop);
+    } while (j < tamPop);
 }

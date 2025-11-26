@@ -7,11 +7,9 @@
 #include "../parameters/Parameters.h"
 #include <cstdlib>
 #include <iostream>
-#include <ostream>
 
 ESN::ESN(const int reservoir_size, const double sparsity, const double spectral_radius_d, const int n_out,
-         const int input_size, const int n_examples, const int n_stab, const int seed = 10)
-{
+         const int input_size, const int n_examples, const int n_stab, const int seed = 10) {
     this->reservoir_size = reservoir_size;
     this->sparsity = sparsity;
     this->input_size = input_size;
@@ -32,10 +30,9 @@ ESN::ESN(const int reservoir_size, const double sparsity, const double spectral_
     reservoir_activations = new double[reservoir_size];
     output_activations = new double[n_out];
 
-    best_reservoir_activations_steps = new double*[nsteps];
-    best_output_activations_steps = new double*[nsteps];
-    for (int i = 0; i < nsteps; i++)
-    {
+    best_reservoir_activations_steps = new double *[nsteps];
+    best_output_activations_steps = new double *[nsteps];
+    for (int i = 0; i < nsteps; i++) {
         best_reservoir_activations_steps[i] = new double[reservoir_size];
         best_output_activations_steps[i] = new double[n_out];
     }
@@ -44,8 +41,7 @@ ESN::ESN(const int reservoir_size, const double sparsity, const double spectral_
     weights_init();
 }
 
-ESN::~ESN()
-{
+ESN::~ESN() {
     desaloc_matrixd(W_in, reservoir_size);
     desaloc_matrixd(W, reservoir_size);
     desaloc_matrixd(W_out, n_out);
@@ -55,8 +51,7 @@ ESN::~ESN()
     delete[] out_neurons;
     delete[] z_old;
 
-    for (int i = 0; i < nsteps; ++i)
-    {
+    for (int i = 0; i < nsteps; ++i) {
         delete[] best_reservoir_activations_steps[i];
         delete[] best_output_activations_steps[i];
     }
@@ -66,27 +61,22 @@ ESN::~ESN()
     delete[] output_activations;
 }
 
-void ESN::weights_init() const
-{
+void ESN::weights_init() const {
     int i, j;
     constexpr double min_W = -0.6;
     constexpr double max_W = 0.6;
 
-    for (i = 0; i < reservoir_size; i++)
-    {
-        res_neurons[i].bias = (max_W - min_W) * random_dou() + min_W; // random number between min_W and max_W
+    for (i = 0; i < reservoir_size; i++) {
+        res_neurons[i].bias = (max_W - min_W) * random_dou() + min_W;
         for (j = 0; j < input_size; j++)
-            W_in[i][j] = (max_W - min_W) * random_dou() + min_W; // random number between min_W and max_W
+            W_in[i][j] = (max_W - min_W) * random_dou() + min_W;
     }
 
-    for (i = 0; i < reservoir_size; i++)
-    {
-        for (j = 0; j < reservoir_size; j++)
-        {
+    for (i = 0; i < reservoir_size; i++) {
+        for (j = 0; j < reservoir_size; j++) {
             if (i == j || random_dou() > sparsity)
                 W[i][j] = 0;
-            else
-            {
+            else {
                 W[i][j] = (max_W - min_W) * random_dou() + min_W;
             }
         }
@@ -94,111 +84,104 @@ void ESN::weights_init() const
 
     const double spectral_radius = largEig(W, reservoir_size, reservoir_size);
 
-    for (i = 0; i < reservoir_size; i++)
+    if (spectral_radius > 1e-9) {
+        for (i = 0; i < reservoir_size; i++)
+            for (j = 0; j < reservoir_size; j++)
+                W[i][j] = spectral_radius_d * W[i][j] / spectral_radius;
+    } else {
+        cout << "Se o raio é 0, a matriz provavelmente é toda zero." << endl
+                << "Não fazemos nada (deixa como está) ou, se preferir, reinicia os pesos." << endl
+                << "Como já alocamos com zero (passo 1), não vai ter lixo de memória."
+                << endl;
+    }
+
+    /*for (i = 0; i < reservoir_size; i++)
         for (j = 0; j < reservoir_size; j++)
-            W[i][j] = spectral_radius_d * W[i][j] / spectral_radius;
+            W[i][j] = spectral_radius_d * W[i][j] / spectral_radius;*/
 }
 
-void ESN::setWout(const double* weight) const
-{
+void ESN::setWout(const double *weight) const {
     int k = 0;
-    for (int i = 0; i < n_out; i++)
-    {
+    for (int i = 0; i < n_out; i++) {
         out_neurons[i].bias = weight[k];
         k++;
-        for (int j = 0; j < reservoir_size; j++)
-        {
+        for (int j = 0; j < reservoir_size; j++) {
             W_out[i][j] = weight[k];
             k++;
         }
     }
 }
 
-void ESN::output(const double* u, double* z, double* y) const
-{
+void ESN::output(const double *u, double *z, double *y) const {
     int i, j;
     double sum_u;
 
-    // Activation of the neurons in the hidden layer 1 (reservoir)
-    for (i = 0; i < reservoir_size; i++)
-    {
+    for (i = 0; i < reservoir_size; i++) {
         sum_u = res_neurons[i].bias;
         for (j = 0; j < input_size; j++)
             sum_u = sum_u + u[j] * W_in[i][j];
         for (j = 0; j < reservoir_size; j++)
             sum_u = sum_u + z_old[j] * W[i][j];
-        z[i] = tanh(1.0 * sum_u); // Tangent hiperbolic with half-slope a=2
+        z[i] = tanh(1.0 * sum_u);
         reservoir_activations[i] = z[i];
     }
 
-    for (i = 0; i < reservoir_size; i++)
-    {
+    for (i = 0; i < reservoir_size; i++) {
         z_old[i] = z[i];
     }
 
-    // Activation of the output units
-    for (i = 0; i < n_out; i++)
-    {
+    for (i = 0; i < n_out; i++) {
         sum_u = out_neurons[i].bias;
 
         for (j = 0; j < reservoir_size; j++)
             sum_u = sum_u + z[j] * W_out[i][j];
         y[i] = sum_u;
-        // y[i]=tanh(1.0*sum_u);				// Tangent hiperbolic with half-slope 2 and input sum_u; obs.: in the original tanh, a=2
         output_activations[i] = y[i];
     }
 }
 
-void ESN::reservoir_activation(const double* u, const double* z_old, double* z) const
-{
+// CORREÇÃO: mudei 'z_old' para 'prev_z' para evitar conflito com o atributo da classe
+/*void ESN::reservoir_activation(const double *u, const double *prev_z, double *z) const {
     int j;
 
-    // Activation of the neurons in hidden layer 1 (reservoir)
-    for (int i = 0; i < reservoir_size; i++)
-    {
-        // neuron
+    for (int i = 0; i < reservoir_size; i++) {
         double sum_u = res_neurons[i].bias;
         for (j = 0; j < input_size; j++)
             sum_u = sum_u + u[j] * W_in[i][j];
-        for (j = 0; j < reservoir_size; j++)
-            sum_u = sum_u + z_old[j] * W[i][j];
-        z[i] = tanh(1.0 * sum_u); // Tangent hiperbolic with half-slope a=2
-    }
-    // op ao pra nao ter que multiplicar os zeros
-    // for (j=0 ; j<hid1_neurons[i].n_rec ; j++)
-    // sum_u = sum_u + z_old[ hid1_neurons[i].rec[j] ]*W[i][ hid1_neurons[i].rec[j]  ];
-}
 
-void ESN::move(const double* in, double* out) const
-{
-    double* z = aloc_vectord(reservoir_size);
+        // CORREÇÃO: Usando 'prev_z' aqui
+        for (j = 0; j < reservoir_size; j++)
+            sum_u = sum_u + prev_z[j] * W[i][j];
+        z[i] = tanh(1.0 * sum_u);
+    }
+}*/
+
+void ESN::move(const double *in, double *out) const {
+    double *z = aloc_vectord(reservoir_size);
 
     output(in, z, out);
 
     delete[] z;
 }
 
-void ESN::clean_z() const
-{
-    for (int i = 0; i < reservoir_size; i++)
-    {
+void ESN::clean_z() const {
+    for (int i = 0; i < reservoir_size; i++) {
         z_old[i] = 0;
     }
 }
 
-void ESN::preTrain(const double* data_s, double* z_old, double* z) const
-{
+// CORREÇÃO: mudei 'z_old' para 'train_z_old' para evitar conflito
+/*void ESN::preTrain(const double *data_s, double *train_z_old, double *z) const {
     int i;
 
     // Stabilization period
     for (i = 0; i < reservoir_size; i++)
-        z_old[i] = 0.0;
+        train_z_old[i] = 0.0; // Usando o novo nome
 
     // Running the ESN for n_stab iterations
-    for (int t = 0; t < n_stab; t++)
-    {
-        reservoir_activation(data_s, z_old, z);
+    for (int t = 0; t < n_stab; t++) {
+        reservoir_activation(data_s, train_z_old, z); // Usando o novo nome
         for (i = 0; i < reservoir_size; i++)
-            z_old[i] = z[i];
+            train_z_old[i] = z[i]; // Usando o novo nome
     }
-}
+}*/

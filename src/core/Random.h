@@ -9,25 +9,31 @@
 #define RAN1 1
 #define RAN2 2
 
-class Random
-{
+class Random {
 public:
     Random(int function, long seed);
+
     ~Random();
 
     [[nodiscard]] int nextInt(int max) const;
+
     [[nodiscard]] bool nextBool() const;
-    long double nextGaussian(long double m, long double sd);
-    [[nodiscard]] long double nextFloat(long double min, long double max) const;
-    [[nodiscard]] long double nextFloat() const;
+
+    double nextGaussian(double m, double sd);
+
+    [[nodiscard]] double nextFloat(double min, double max) const;
+
+    [[nodiscard]] double nextFloat() const;
+
     [[nodiscard]] long getidum() const;
 
 private:
-    long double (*ran)(long* idum);
-    long* idum;
+    long double (*ran)(long *idum);
+
+    long *idum;
 
     bool hasNextGaussian;
-    float nextNextGaussian{};
+    double nextNextGaussian{};
 };
 
 

@@ -6,8 +6,7 @@
 #include "../../core/estVIG2.h"
 #include "../../parameters/Parameters.h"
 
-double LL(alelo* cromossomo1, const alelo* cromossomo2, estVIG2* eVIG_instance, double fitness)
-{
+double LL(alelo *cromossomo1, const alelo *cromossomo2, estVIG2 *eVIG_instance, double fitness) {
     int i;
     double fxnew;
     individuo xg, xh, xgh;
@@ -15,8 +14,7 @@ double LL(alelo* cromossomo1, const alelo* cromossomo2, estVIG2* eVIG_instance, 
     // Selecting index g
     int g = random_int(0, lcrom - 1);
     double dxg = fabs(cromossomo1[g] - cromossomo2[g]);
-    for (i = 0; dxg <= EPS2 && i < lcrom; i++)
-    {
+    for (i = 0; dxg <= EPS2 && i < lcrom; i++) {
         g = (g + 1) % lcrom;
         dxg = fabs(cromossomo1[g] - cromossomo2[g]);
     }
@@ -28,11 +26,9 @@ double LL(alelo* cromossomo1, const alelo* cromossomo2, estVIG2* eVIG_instance, 
     while (h == g)
         h = random_int(0, lcrom - 1);
     double dxh = fabs(cromossomo1[h] - cromossomo2[h]);
-    for (i = 0; dxh <= EPS2 && i < lcrom; i++)
-    {
+    for (i = 0; dxh <= EPS2 && i < lcrom; i++) {
         h = (h + 1) % lcrom;
-        if (h == g)
-        {
+        if (h == g) {
             h = (h + 1) % lcrom;
             i++;
         }
@@ -44,8 +40,7 @@ double LL(alelo* cromossomo1, const alelo* cromossomo2, estVIG2* eVIG_instance, 
     xg.cromossomo = aloc_vectord(lcrom); // individal xg
     xh.cromossomo = aloc_vectord(lcrom); // individual xh
     xgh.cromossomo = aloc_vectord(lcrom); // individual xgh
-    for (int gene = 0; gene < lcrom; gene++)
-    {
+    for (int gene = 0; gene < lcrom; gene++) {
         xg.cromossomo[gene] = cromossomo1[gene];
         xh.cromossomo[gene] = cromossomo1[gene];
         xgh.cromossomo[gene] = cromossomo1[gene];
@@ -55,8 +50,7 @@ double LL(alelo* cromossomo1, const alelo* cromossomo2, estVIG2* eVIG_instance, 
     xg.cromossomo[g] = cromossomo2[g];
     //xg.fitness = compFitness(xg.chromosome);
     xg.fitness = calcFitness(xg.cromossomo);
-    if (stop_flag == 1)
-    {
+    if (stop_flag == 1) {
         delete[] xg.cromossomo;
         delete[] xh.cromossomo;
         delete[] xgh.cromossomo;
@@ -70,8 +64,7 @@ double LL(alelo* cromossomo1, const alelo* cromossomo2, estVIG2* eVIG_instance, 
     // Individual xh: individual x with mutation in x[h]
     xh.cromossomo[h] = cromossomo2[h];
     xh.fitness = calcFitness(xh.cromossomo);;
-    if (stop_flag == 1)
-    {
+    if (stop_flag == 1) {
         delete[] xg.cromossomo;
         delete[] xh.cromossomo;
         delete[] xgh.cromossomo;
@@ -86,8 +79,7 @@ double LL(alelo* cromossomo1, const alelo* cromossomo2, estVIG2* eVIG_instance, 
     xgh.cromossomo[g] = cromossomo2[g];
     xgh.cromossomo[h] = cromossomo2[h];
     xgh.fitness = calcFitness(xgh.cromossomo);
-    if (stop_flag == 1)
-    {
+    if (stop_flag == 1) {
         delete[] xg.cromossomo;
         delete[] xh.cromossomo;
         delete[] xgh.cromossomo;
@@ -95,8 +87,7 @@ double LL(alelo* cromossomo1, const alelo* cromossomo2, estVIG2* eVIG_instance, 
     }
     // Variable interaction
     df = fabs(xgh.fitness - xh.fitness - xg.fitness + fitness);
-    if (df > EPS4)
-    {
+    if (df > EPS4) {
         // df changed because variables g and h interact
         // Variable interaction for variables g and h
         double dxgh = sqrt(dxg * dxg + dxh * dxh); // Euclidean distance (size of the difference vector)
@@ -114,27 +105,20 @@ double LL(alelo* cromossomo1, const alelo* cromossomo2, estVIG2* eVIG_instance, 
     }
 
     // Updating individual x
-    if (xgh.fitness > xh.fitness && xgh.fitness > xg.fitness && xgh.fitness > fitness)
-    {
+    if (xgh.fitness > xh.fitness && xgh.fitness > xg.fitness && xgh.fitness > fitness) {
         // best individual: xgh
         cromossomo1[g] = xgh.cromossomo[g];
         cromossomo1[h] = xgh.cromossomo[h];
         fxnew = xgh.fitness;
-    }
-    else if (xg.fitness > xh.fitness && xg.fitness > fitness)
-    {
+    } else if (xg.fitness > xh.fitness && xg.fitness > fitness) {
         // best individual: xg
         cromossomo1[g] = xg.cromossomo[g];
         fxnew = xg.fitness;
-    }
-    else if (xh.fitness > fitness)
-    {
+    } else if (xh.fitness > fitness) {
         // best individual: xh
         cromossomo1[h] = xh.cromossomo[h];
         fxnew = xh.fitness;
-    }
-    else
-    {
+    } else {
         // best individual: x
         fxnew = fitness;
     }

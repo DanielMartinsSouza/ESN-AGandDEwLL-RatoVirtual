@@ -294,7 +294,7 @@ void file_output(const int total_runs)
     {
         FILE* Bfg_file;
         sprintf(name, "data/bfg_f_N%d_ll%d_m%d_c%d.dat", N, LL_flag, mutation_type, crossover_type);
-        if ((Bfg_file = fopen(name_p, "w")) == NULL)
+        if ((Bfg_file = fopen(name_p, "w")) == nullptr)
         {
             puts("The file bfg to be saved cannot be open \n");
             exit(1);
@@ -310,7 +310,7 @@ void file_output(const int total_runs)
         {
             FILE* Nedges_gen_file;
             sprintf(name, "data/nedgesgen_f_N%d_ll%d_m%d_c%d.dat", N, LL_flag, mutation_type, crossover_type);
-            if ((Nedges_gen_file = fopen(name_p, "w")) == NULL)
+            if ((Nedges_gen_file = fopen(name_p, "w")) == nullptr)
             {
                 puts("The file nedgesgen to be saved cannot be open \n");
                 exit(1);
@@ -329,7 +329,7 @@ void file_output(const int total_runs)
     {
         FILE* Nedges_file;
         sprintf(name, "data/nedges_f_N%d_ll%d_m%d_c%d.dat", N, LL_flag, mutation_type, crossover_type);
-        if ((Nedges_file = fopen(name_p, "w")) == NULL)
+        if ((Nedges_file = fopen(name_p, "w")) == nullptr)
         {
             puts("The file nedges to be saved cannot be open \n");
             exit(1);
@@ -343,7 +343,7 @@ void file_output(const int total_runs)
 
     // Best fitness
     sprintf(name, "data/bfi_f_N%d_ll%d_m%d_c%d.dat", N, LL_flag, mutation_type, crossover_type);
-    if ((Bestfit_file = fopen(name_p, "w")) == NULL)
+    if ((Bestfit_file = fopen(name_p, "w")) == nullptr)
     {
         puts("The file bfi to be saved cannot be open \n");
         exit(1);
@@ -359,7 +359,7 @@ void file_output(const int total_runs)
     {
         FILE* Bestind_file;
         sprintf(name, "data/bind_f_N%d_ll%d_m%d_c%d.dat", N, LL_flag, mutation_type, crossover_type);
-        if ((Bestind_file = fopen(name_p, "w")) == NULL)
+        if ((Bestind_file = fopen(name_p, "w")) == nullptr)
         {
             puts("The file bind to be saved cannot be open \n");
             exit(1);
@@ -375,7 +375,7 @@ void file_output(const int total_runs)
 
     // Time for each run
     sprintf(name, "data/time_f_N%d_ll%d_m%d_c%d.dat", N, LL_flag, mutation_type, crossover_type);
-    if ((Time_file = fopen(name_p, "w")) == NULL)
+    if ((Time_file = fopen(name_p, "w")) == nullptr)
     {
         puts("The file time to be saved cannot be open \n");
         exit(1);
@@ -388,7 +388,7 @@ void file_output(const int total_runs)
 
     // Number of generations for each run
     sprintf(name, "data/gen_f_N%d_ll%d_m%d_c%d.dat", N, LL_flag, mutation_type, crossover_type);
-    if ((Gen_file = fopen(name_p, "w")) == NULL)
+    if ((Gen_file = fopen(name_p, "w")) == nullptr)
     {
         puts("The file gen to be saved cannot be open \n");
         exit(1);
@@ -404,7 +404,7 @@ void file_output(const int total_runs)
     {
         FILE* Nfeval_file;
         sprintf(name, "data/nfeval_f_N%d_ll%d_m%d_c%d.dat", N, LL_flag, mutation_type, crossover_type);
-        if ((Nfeval_file = fopen(name_p, "w")) == NULL)
+        if ((Nfeval_file = fopen(name_p, "w")) == nullptr)
         {
             puts("The file nfeval to be saved cannot be open \n");
             exit(1);
@@ -418,7 +418,7 @@ void file_output(const int total_runs)
 
     // Best fitness at different times
     sprintf(name, "data/bfi002_f_N%d_ll%d_m%d_c%d.dat", N, LL_flag, mutation_type, crossover_type);
-    if ((Bestfit002_file = fopen(name_p, "w")) == NULL)
+    if ((Bestfit002_file = fopen(name_p, "w")) == nullptr)
     {
         puts("The file bfi002 to be saved cannot be open \n");
         exit(1);
@@ -429,7 +429,7 @@ void file_output(const int total_runs)
     }
     fclose(Bestfit002_file);
     sprintf(name, "data/bfi020_f_N%d_ll%d_m%d_c%d.dat", N, LL_flag, mutation_type, crossover_type);
-    if ((Bestfit020_file = fopen(name_p, "w")) == NULL)
+    if ((Bestfit020_file = fopen(name_p, "w")) == nullptr)
     {
         puts("The file bfi020 to be saved cannot be open \n");
         exit(1);
@@ -440,7 +440,7 @@ void file_output(const int total_runs)
     }
     fclose(Bestfit020_file);
     sprintf(name, "data/bfi040_f_N%d_ll%d_m%d_c%d.dat", N, LL_flag, mutation_type, crossover_type);
-    if ((Bestfit040_file = fopen(name_p, "w")) == NULL)
+    if ((Bestfit040_file = fopen(name_p, "w")) == nullptr)
     {
         puts("The file bfi040 to be saved cannot be open \n");
         exit(1);

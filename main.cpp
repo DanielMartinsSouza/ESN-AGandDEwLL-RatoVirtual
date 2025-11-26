@@ -4,11 +4,11 @@ using namespace std;
 
 void message(const char* ag)
 {
-    //cout << ag << " não será executado." << endl;
+    cout << ag << " não será executado." << endl;
 }
 
 // TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
-int main(int argc, char* argv[])
+int main(const int argc, char* argv[])
 {
     if (argc < 3)
     {

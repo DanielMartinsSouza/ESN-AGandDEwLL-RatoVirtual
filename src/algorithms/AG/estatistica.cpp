@@ -4,7 +4,7 @@
 
 #include "../../parameters/Parameters.h"
 
-void estatistica(populacao* pop, const int gen)
+void estatistica(populacao* pop, const int genAtual)
 {
     int j;
 
@@ -27,10 +27,10 @@ void estatistica(populacao* pop, const int gen)
     pop->mediaFitness = pop->somaFitness / tamPop;
 
     // Dados para serem salvos
-    arq_media_fitness[gen] = pop->mediaFitness;
-    arq_melhor_fitness[gen] = pop->maxFitness;
+    arq_media_fitness[genAtual] = pop->mediaFitness;
+    arq_melhor_fitness[genAtual] = pop->maxFitness;
 
     const int n = pop->melhorIndividuo;
     for (j = 0; j < lcrom; j++)
-        arq_melhor_individuo[gen][j] = pop->indiv[n].cromossomo[j];
+        arq_melhor_individuo[genAtual][j] = pop->indiv[n].cromossomo[j];
 }

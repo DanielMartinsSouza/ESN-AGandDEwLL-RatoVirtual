@@ -12,7 +12,7 @@ long double ran0(long* idum)
     const long k = (*idum) / IQ;
 
     *idum = IA * (*idum - k * IQ) - IR * k; // Compute idum=(IA*idum) % IM without
-    // over- flows by Schrage's method.
+
     if (*idum < 0)
     {
         *idum += IM;
