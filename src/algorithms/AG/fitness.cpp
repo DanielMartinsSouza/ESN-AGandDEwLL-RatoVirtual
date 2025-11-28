@@ -109,7 +109,7 @@ double calcFitness(const alelo *indiv) {
                 int equal = 0;
                 for (int i = 0; i < memory; i++) {
                     // para comecar do mais recente
-                    int m = (step % memory) - 1 - i;
+                    int m = step % memory - 1 - i;
                     if (m < 0)
                         m = memory + m;
 
@@ -122,13 +122,11 @@ double calcFitness(const alelo *indiv) {
                     }
                     if (equal) {
                         constexpr double gama = 0.9;
-                        const int m_linha = (memory - (step % memory) + m) % memory;
+                        const int m_linha = (memory - step % memory + m) % memory;
 
                         const double prob = 1 - gama / (memory - m_linha);
 
-                        // CORREÇÃO: Substituído rand() por random_dou() (Gera double 0.0 a 1.0)
-                        // Isso resolve o aviso de Narrowing e o de Limited Randomness
-                        if (random_dou() < prob) {
+                        if (const double r = random_dou(); r < prob) {
                             Fitness++;
                             ganhouProbMem++;
                         }
@@ -150,9 +148,8 @@ double calcFitness(const alelo *indiv) {
         for (int k = 0; k < 6; k++)
             prevRd[step % memory][k] = in[k];
 
-        // CORREÇÃO: Substituído rand() por random_dou()
-        if (random_dou() < alpha / (sum_in + 1)) {
-            constexpr double beta = 6;
+        if (const double z = random_dou(); z < alpha / (sum_in + 1)) {
+            constexpr double beta = 0.5;
             Fitness -= beta;
             perdeuBeta++;
         }
