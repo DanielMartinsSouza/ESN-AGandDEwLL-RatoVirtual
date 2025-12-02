@@ -9,31 +9,34 @@
 
 class Simulador;
 
-double calcFitness(const alelo *indiv) {
-    if (stop_flag == 0)
+double calcFitness(const alelo* indiv)
+{
+    if (stop_flag == 0 && LLfinish == 0)
         nfeval++;
-    if (stop_cr == 1) {
+    if (stop_cr == 1)
+    {
         if (nfeval >= max_nfeval)
             stop_flag = 1;
     }
 
     // Inicializar matrizes para armazenar ativações ao longo dos passos
-    reservoir_activations_steps = new double *[nsteps];
-    output_activations_steps = new double *[nsteps];
-    for (int i = 0; i < nsteps; i++) {
+    reservoir_activations_steps = new double*[nsteps];
+    output_activations_steps = new double*[nsteps];
+    for (int i = 0; i < nsteps; i++)
+    {
         reservoir_activations_steps[i] = new double[reservoir_size];
         output_activations_steps[i] = new double[n_out];
     }
     double Fitness = 0;
 
-    auto *simulador = new Simulador(200, 120);
+    auto* simulador = new Simulador(200, 120);
 
     // variaveis
     constexpr int memory = 10;
     double prevRd[memory][6];
 
-    for (auto &i: prevRd)
-        for (double &j: i)
+    for (auto& i : prevRd)
+        for (double& j : i)
             j = -1;
 
     // Pesos do repositorio
@@ -49,18 +52,20 @@ double calcFitness(const alelo *indiv) {
     int n1 = 0;
     int n2 = 0;
     int n3 = 0;
-    auto *acoes = new double[nsteps];
+    auto* acoes = new double[nsteps];
 
     st_pos = 0;
 
-    for (int step = 0; step < nsteps; step++) {
+    for (int step = 0; step < nsteps; step++)
+    {
         constexpr double alpha = 0.07;
 
-        const double *in10 = simulador->readSensor(10);
-        const double *in30 = simulador->readSensor(30);
+        const double* in10 = simulador->readSensor(10);
+        const double* in30 = simulador->readSensor(30);
 
-        auto *in = new double[6];
-        for (int j = 0; j < 3; j++) {
+        auto* in = new double[6];
+        for (int j = 0; j < 3; j++)
+        {
             in[j] = in10[j];
             in[j + 3] = in30[j];
         }
@@ -69,14 +74,16 @@ double calcFitness(const alelo *indiv) {
         for (int i = 0; i < input_size; i++)
             sum_in += static_cast<int>(in[i]);
 
-        auto *out = new double[n_out];
+        auto* out = new double[n_out];
 
         esn->move(in, out);
 
         int action = 0;
 
-        for (int i = 1; i < n_out; i++) {
-            if (out[i] > out[action]) {
+        for (int i = 1; i < n_out; i++)
+        {
+            if (out[i] > out[action])
+            {
                 action = i;
             }
         }
@@ -86,47 +93,54 @@ double calcFitness(const alelo *indiv) {
         simulador->execute(action, 10, acoes, step);
 
         // SWITCH
-        switch (action) {
-            case 0:
-                /** Bloco Rotacionar 45° **/
-                n0++;
-                break;
+        switch (action)
+        {
+        case 0:
+            /** Bloco Rotacionar 45° **/
+            n0++;
+            break;
 
-            case 1:
-                /** Bloco Rotacionar -45° **/
-                n1++;
-                break;
+        case 1:
+            /** Bloco Rotacionar -45° **/
+            n1++;
+            break;
 
-            case 2:
-                /** Bloco Rotacionar 90° **/
-                n2++;
-                break;
+        case 2:
+            /** Bloco Rotacionar 90° **/
+            n2++;
+            break;
 
-            case 3: {
+        case 3:
+            {
                 /** Mover para frente 10cm   M = 1 **/
                 n3++;
                 // penalizado por passar em lugares ja visitados
                 int equal = 0;
-                for (int i = 0; i < memory; i++) {
+                for (int i = 0; i < memory; i++)
+                {
                     // para comecar do mais recente
                     int m = step % memory - 1 - i;
                     if (m < 0)
                         m = memory + m;
 
                     equal = 1;
-                    for (int s = 0; s < 6; s++) {
-                        if (prevRd[m][s] != in[s]) {
+                    for (int s = 0; s < 6; s++)
+                    {
+                        if (prevRd[m][s] != in[s])
+                        {
                             equal = 0;
                             break;
                         }
                     }
-                    if (equal) {
+                    if (equal)
+                    {
                         constexpr double gama = 0.9;
                         const int m_linha = (memory - step % memory + m) % memory;
 
                         const double prob = 1 - gama / (memory - m_linha);
 
-                        if (const double r = random_dou(); r < prob) {
+                        if (const double r = random_dou(); r < prob)
+                        {
                             Fitness++;
                             ganhouProbMem++;
                         }
@@ -134,31 +148,35 @@ double calcFitness(const alelo *indiv) {
                     }
                 }
                 // recompensado por andar pra frente
-                if (!equal) {
+                if (!equal)
+                {
                     Fitness++;
                     ganhouDireto++;
                 }
                 break;
             }
-            default:
-                break;
+        default:
+            break;
         } // switch
 
         // memoria do rato - n(memory) ultimas leituras dos sensores (n passos)
         for (int k = 0; k < 6; k++)
             prevRd[step % memory][k] = in[k];
 
-        if (const double z = random_dou(); z < alpha / (sum_in + 1)) {
+        if (const double z = random_dou(); z < alpha / (sum_in + 1))
+        {
             constexpr double beta = 0.5;
             Fitness -= beta;
             perdeuBeta++;
         }
 
         // Salvar ativações do reservatório e da saída para o passo atual
-        for (int i = 0; i < reservoir_size; i++) {
+        for (int i = 0; i < reservoir_size; i++)
+        {
             reservoir_activations_steps[step][i] = reservoir_activations[i];
         }
-        for (int i = 0; i < n_out; i++) {
+        for (int i = 0; i < n_out; i++)
+        {
             output_activations_steps[step][i] = output_activations[i];
         }
 
@@ -170,11 +188,12 @@ double calcFitness(const alelo *indiv) {
 
     // para as posicoes e o numero de passos pra frente
 
-    if (Fitness > bestFitness) {
+    if (Fitness > bestFitness)
+    {
         bestFitness = Fitness;
         // passando os valores do individuo anterior para os aux
-        double *auxX = bestX;
-        double *auxY = bestY;
+        double* auxX = bestX;
+        double* auxY = bestY;
 
         // passando os valores do individuo atual para as respectivas variaveis
         bestX = pX;
@@ -193,19 +212,23 @@ double calcFitness(const alelo *indiv) {
         pBeta = perdeuBeta;
 
         // Atualizar as ativações globais para o melhor fitness
-        for (int step = 0; step < nsteps; step++) {
+        for (int step = 0; step < nsteps; step++)
+        {
             bestAcoes[step] = acoes[step];
-            for (int i = 0; i < reservoir_size; i++) {
+            for (int i = 0; i < reservoir_size; i++)
+            {
                 best_reservoir_activations_steps[step][i] = reservoir_activations_steps[step][i];
             }
-            for (int i = 0; i < n_out; i++) {
+            for (int i = 0; i < n_out; i++)
+            {
                 best_output_activations_steps[step][i] = output_activations_steps[step][i];
             }
         }
     }
 
     // Desalocar matrizes de ativações
-    for (int i = 0; i < nsteps; ++i) {
+    for (int i = 0; i < nsteps; ++i)
+    {
         delete[] reservoir_activations_steps[i];
         delete[] output_activations_steps[i];
     }

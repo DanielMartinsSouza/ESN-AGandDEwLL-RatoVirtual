@@ -9,7 +9,8 @@
 #include <iostream>
 
 ESN::ESN(const int reservoir_size, const double sparsity, const double spectral_radius_d, const int n_out,
-         const int input_size, const int n_examples, const int n_stab, const int seed = 10) {
+         const int input_size, const int n_examples, const int n_stab, const int seed = 10)
+{
     this->reservoir_size = reservoir_size;
     this->sparsity = sparsity;
     this->input_size = input_size;
@@ -30,9 +31,10 @@ ESN::ESN(const int reservoir_size, const double sparsity, const double spectral_
     reservoir_activations = new double[reservoir_size];
     output_activations = new double[n_out];
 
-    best_reservoir_activations_steps = new double *[nsteps];
-    best_output_activations_steps = new double *[nsteps];
-    for (int i = 0; i < nsteps; i++) {
+    best_reservoir_activations_steps = new double*[nsteps];
+    best_output_activations_steps = new double*[nsteps];
+    for (int i = 0; i < nsteps; i++)
+    {
         best_reservoir_activations_steps[i] = new double[reservoir_size];
         best_output_activations_steps[i] = new double[n_out];
     }
@@ -41,7 +43,8 @@ ESN::ESN(const int reservoir_size, const double sparsity, const double spectral_
     weights_init();
 }
 
-ESN::~ESN() {
+ESN::~ESN()
+{
     desaloc_matrixd(W_in, reservoir_size);
     desaloc_matrixd(W, reservoir_size);
     desaloc_matrixd(W_out, n_out);
@@ -51,7 +54,8 @@ ESN::~ESN() {
     delete[] out_neurons;
     delete[] z_old;
 
-    for (int i = 0; i < nsteps; ++i) {
+    for (int i = 0; i < nsteps; ++i)
+    {
         delete[] best_reservoir_activations_steps[i];
         delete[] best_output_activations_steps[i];
     }
@@ -61,22 +65,27 @@ ESN::~ESN() {
     delete[] output_activations;
 }
 
-void ESN::weights_init() const {
+void ESN::weights_init() const
+{
     int i, j;
     constexpr double min_W = -0.6;
     constexpr double max_W = 0.6;
 
-    for (i = 0; i < reservoir_size; i++) {
+    for (i = 0; i < reservoir_size; i++)
+    {
         res_neurons[i].bias = (max_W - min_W) * random_dou() + min_W;
         for (j = 0; j < input_size; j++)
             W_in[i][j] = (max_W - min_W) * random_dou() + min_W;
     }
 
-    for (i = 0; i < reservoir_size; i++) {
-        for (j = 0; j < reservoir_size; j++) {
+    for (i = 0; i < reservoir_size; i++)
+    {
+        for (j = 0; j < reservoir_size; j++)
+        {
             if (i == j || random_dou() > sparsity)
                 W[i][j] = 0;
-            else {
+            else
+            {
                 W[i][j] = (max_W - min_W) * random_dou() + min_W;
             }
         }
@@ -84,15 +93,18 @@ void ESN::weights_init() const {
 
     const double spectral_radius = largEig(W, reservoir_size, reservoir_size);
 
-    if (spectral_radius > 1e-9) {
+    if (spectral_radius > 1e-9)
+    {
         for (i = 0; i < reservoir_size; i++)
             for (j = 0; j < reservoir_size; j++)
                 W[i][j] = spectral_radius_d * W[i][j] / spectral_radius;
-    } else {
+    }
+    else
+    {
         cout << "Se o raio é 0, a matriz provavelmente é toda zero." << endl
-                << "Não fazemos nada (deixa como está) ou, se preferir, reinicia os pesos." << endl
-                << "Como já alocamos com zero (passo 1), não vai ter lixo de memória."
-                << endl;
+            << "Não fazemos nada (deixa como está) ou, se preferir, reinicia os pesos." << endl
+            << "Como já alocamos com zero (passo 1), não vai ter lixo de memória."
+            << endl;
     }
 
     /*for (i = 0; i < reservoir_size; i++)
@@ -100,23 +112,28 @@ void ESN::weights_init() const {
             W[i][j] = spectral_radius_d * W[i][j] / spectral_radius;*/
 }
 
-void ESN::setWout(const double *weight) const {
+void ESN::setWout(const double* weight) const
+{
     int k = 0;
-    for (int i = 0; i < n_out; i++) {
+    for (int i = 0; i < n_out; i++)
+    {
         out_neurons[i].bias = weight[k];
         k++;
-        for (int j = 0; j < reservoir_size; j++) {
+        for (int j = 0; j < reservoir_size; j++)
+        {
             W_out[i][j] = weight[k];
             k++;
         }
     }
 }
 
-void ESN::output(const double *u, double *z, double *y) const {
+void ESN::output(const double* u, double* z, double* y) const
+{
     int i, j;
     double sum_u;
 
-    for (i = 0; i < reservoir_size; i++) {
+    for (i = 0; i < reservoir_size; i++)
+    {
         sum_u = res_neurons[i].bias;
         for (j = 0; j < input_size; j++)
             sum_u = sum_u + u[j] * W_in[i][j];
@@ -126,11 +143,13 @@ void ESN::output(const double *u, double *z, double *y) const {
         reservoir_activations[i] = z[i];
     }
 
-    for (i = 0; i < reservoir_size; i++) {
+    for (i = 0; i < reservoir_size; i++)
+    {
         z_old[i] = z[i];
     }
 
-    for (i = 0; i < n_out; i++) {
+    for (i = 0; i < n_out; i++)
+    {
         sum_u = out_neurons[i].bias;
 
         for (j = 0; j < reservoir_size; j++)
@@ -156,16 +175,19 @@ void ESN::output(const double *u, double *z, double *y) const {
     }
 }*/
 
-void ESN::move(const double *in, double *out) const {
-    double *z = aloc_vectord(reservoir_size);
+void ESN::move(const double* in, double* out) const
+{
+    double* z = aloc_vectord(reservoir_size);
 
     output(in, z, out);
 
     delete[] z;
 }
 
-void ESN::clean_z() const {
-    for (int i = 0; i < reservoir_size; i++) {
+void ESN::clean_z() const
+{
+    for (int i = 0; i < reservoir_size; i++)
+    {
         z_old[i] = 0;
     }
 }
