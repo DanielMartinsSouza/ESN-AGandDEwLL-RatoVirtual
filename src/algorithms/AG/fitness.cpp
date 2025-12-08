@@ -165,7 +165,7 @@ double calcFitness(const alelo* indiv)
 
         if (const double z = random_dou(); z < alpha / (sum_in + 1))
         {
-            constexpr double beta = 0.5;
+            constexpr double beta = 6;
             Fitness -= beta;
             perdeuBeta++;
         }
