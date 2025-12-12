@@ -31,6 +31,7 @@ void estatistica(populacao* pop, const int genAtual)
     arq_melhor_fitness[genAtual] = pop->maxFitness;
 
     const int n = pop->melhorIndividuo;
-    for (j = 0; j < lcrom; j++)
+    for (j = 0; j < lcrom; j++){
         arq_melhor_individuo[genAtual][j] = pop->indiv[n].cromossomo[j];
+    }
 }

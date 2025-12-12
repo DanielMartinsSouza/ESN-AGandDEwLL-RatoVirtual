@@ -20,8 +20,10 @@ void mutation_DErand1(alelo* offspring, const int j)
 
     // Transformation
     for (int gene = 0; gene < lcrom; gene++)
+    {
         offspring[gene] = popVelha.indiv[a].cromossomo[gene] + F_DE * (popVelha.indiv[b].cromossomo[gene] - popVelha.
             indiv[c].cromossomo[gene]);
+    }
 }
 
 void mutation_DEbest1(alelo* offspring, const int j)

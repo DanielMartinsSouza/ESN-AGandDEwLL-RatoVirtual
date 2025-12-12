@@ -36,8 +36,12 @@ double calcFitness(const alelo* indiv)
     double prevRd[memory][6];
 
     for (auto& i : prevRd)
+    {
         for (double& j : i)
+        {
             j = -1;
+        }
+    }
 
     // Pesos do repositorio
     esn->setWout(indiv);
@@ -72,7 +76,9 @@ double calcFitness(const alelo* indiv)
 
         int sum_in = 0;
         for (int i = 0; i < input_size; i++)
+        {
             sum_in += static_cast<int>(in[i]);
+        }
 
         auto* out = new double[n_out];
 
@@ -161,11 +167,13 @@ double calcFitness(const alelo* indiv)
 
         // memoria do rato - n(memory) ultimas leituras dos sensores (n passos)
         for (int k = 0; k < 6; k++)
+        {
             prevRd[step % memory][k] = in[k];
+        }
 
         if (const double z = random_dou(); z < alpha / (sum_in + 1))
         {
-            constexpr double beta = 6;
+            constexpr double beta = 0.5;
             Fitness -= beta;
             perdeuBeta++;
         }

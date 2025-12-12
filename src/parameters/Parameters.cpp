@@ -7,10 +7,10 @@
 class ESN;
 // Iniciando os Parametros da ESN
 int input_size = 6;
-int reservoir_size = 5;
+int reservoir_size = 10;
 int n_out = 4;
 double spectral_radius_d = 0.95;
-double sparsity = 0.1;
+double sparsity = 0.1; //0.1
 int n_stab = 10;
 int n_examples = 10;
 
@@ -28,7 +28,7 @@ double taxaMut = 1.0 / lcrom; // taxa de mutacao
 // Iniciando os parametros do DE
 int LLfinish = 0;
 double CR_DE = 0.9; //0.9; // crossover probability: DE parameter CR
-int crossover_type = 3; // crossover type: 1 - Binomial Crossover; 2 - VIntX; 3 - GbinX
+int crossover_type = 2; // crossover type: 1 - Binomial Crossover; 2 - VIntX; 3 - GbinX
 int mutation_type = 2; // mutation type: 1 - DE/rand/1; 2 - DE/best/1
 double F_DE = 0.5; // differential weight: DE parameter F
 double pLL = 0.2; // probability of testing LinkageLearning in an offspring
@@ -67,7 +67,7 @@ double** Madj_m; // Mean Adjacency Matrix (2-variable interaction)
 clock_t time_start; // starting time
 double max_time; // maximum time for experiments with maximum time
 int flag_best_fitness_002, flag_best_fitness_020, flag_best_fitness_040;
-// data to be stored: flag to save best fitness at different times
+// data to be stored: flag to save the best fitness at different times
 
 // Simulador
 int nsteps = 300;

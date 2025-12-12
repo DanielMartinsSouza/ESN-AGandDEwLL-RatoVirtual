@@ -15,7 +15,9 @@ void statistics(populacao* pop, const int n_run, const int n_edges_eVIG)
         {
             file_best_fitness[n_run] = pop->indiv[0].fitness;
             for (int gene = 0; gene < lcrom; gene++)
+            {
                 File_best_ind[n_run][gene] = pop->indiv[0].cromossomo[gene];
+            }
         }
         for (int j = 1; j < tamPop; j++)
         {

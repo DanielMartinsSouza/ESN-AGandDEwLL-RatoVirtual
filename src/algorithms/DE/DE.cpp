@@ -28,14 +28,20 @@ int main_DE()
     vsort_aux = aloc_vectori(lcrom); // Auxiliar sorted vector of integers (used in different methods)
 
     for (int i = 0; i < lcrom; i++)
+    {
         vsort_aux[i] = i;
+    }
     if (save_datagen_flag == 1 && LL_flag > 0)
     {
         weightVert_m = aloc_vectord(lcrom);
         Madj_m = aloc_matrixd(lcrom, lcrom);
         for (int i = 0; i < lcrom; i++)
+        {
             for (int j = 0; j < lcrom; j++)
+            {
                 Madj_m[i][j] = 0.0;
+            }
+        }
     }
 
     cout << "\n ***** Differential Evolution ****" << endl;

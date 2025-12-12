@@ -75,9 +75,12 @@ void ESN::weights_init() const
     {
         res_neurons[i].bias = (max_W - min_W) * random_dou() + min_W;
         for (j = 0; j < input_size; j++)
+        {
             W_in[i][j] = (max_W - min_W) * random_dou() + min_W;
+        }
     }
 
+    bool matrizIsZero = true;
     for (i = 0; i < reservoir_size; i++)
     {
         for (j = 0; j < reservoir_size; j++)
@@ -86,22 +89,49 @@ void ESN::weights_init() const
                 W[i][j] = 0;
             else
             {
+                matrizIsZero = false;
                 W[i][j] = (max_W - min_W) * random_dou() + min_W;
             }
         }
     }
 
+    if (matrizIsZero)
+    {
+        int targetWeight;
+        int targetWeight2;
+        int targetNeuron;
+        int targetNeuron2;
+        do
+        {
+             targetWeight = random_int(0, reservoir_size-1);
+             targetNeuron = random_int(0, reservoir_size-1);
+
+        }while (targetNeuron == targetWeight);
+        W[targetNeuron][targetWeight] = (max_W - min_W) * random_dou() + min_W;
+
+        do
+        {
+            targetWeight2 = random_int(0, reservoir_size-1);
+            targetNeuron2 = random_int(0, reservoir_size-1);
+        }while (targetNeuron2 == targetWeight2 || (targetNeuron == targetNeuron2 && targetWeight == targetWeight2));
+        W[targetNeuron2][targetWeight2] = (max_W - min_W) * random_dou() + min_W;
+    }
+
     const double spectral_radius = largEig(W, reservoir_size, reservoir_size);
 
-    if (spectral_radius > 1e-9)
+    if (spectral_radius > 0)
     {
         for (i = 0; i < reservoir_size; i++)
+        {
             for (j = 0; j < reservoir_size; j++)
+            {
                 W[i][j] = spectral_radius_d * W[i][j] / spectral_radius;
+            }
+        }
     }
     else
     {
-        cout << "Se o raio é 0, a matriz provavelmente é toda zero." << endl
+        cout << "Raio Espectral igual à 0" << endl
             << "Não fazemos nada (deixa como está) ou, se preferir, reinicia os pesos." << endl
             << "Como já alocamos com zero (passo 1), não vai ter lixo de memória."
             << endl;

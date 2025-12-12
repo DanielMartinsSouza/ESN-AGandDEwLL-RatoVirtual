@@ -34,7 +34,9 @@ void Graph::connectedComponents(int* connected_v)
     // Mark all the vertices as not visited
     bool* visited = new bool[V];
     for (v = 0; v < V; v++)
+    {
         visited[v] = false;
+    }
 
     for (v = 0; v < V; v++)
     {
@@ -58,8 +60,12 @@ void Graph::DFSUtil(const int v, bool visited[], int* connected_v, const int com
 
     // Recurrence for all the vertices adjacent to vertex v
     for (const int& i : adj[v])
+    {
         if (!visited[i])
+        {
             DFSUtil(i, visited, connected_v, comp_index);
+        }
+    }
 }
 
 int Graph::isThereEdge(const int v, const int w) const

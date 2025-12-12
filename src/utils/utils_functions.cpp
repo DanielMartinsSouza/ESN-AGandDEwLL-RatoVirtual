@@ -4,7 +4,6 @@
 #include <cmath>
 #include "../parameters/Parameters.h"
 #include <cstdlib>
-#include <iostream>
 #include <random>
 
 using namespace std;
@@ -45,23 +44,13 @@ void desaloc_matrixd(double** Matrix, const int lines)
 
 double random_dou()
 {
-    static std::random_device rd;
-    static std::mt19937 rng(rd());
-
-    std::uniform_real_distribution<> dis(0.0, 1.0);
-
-    return dis(rng);
+    return rand() / static_cast<double>(RAND_MAX);
 }
 
 
 int random_int(const int L_range, const int H_range)
 {
-    static std::random_device rd;
-    static std::mt19937 rng(rd());
-
-    std::uniform_int_distribution<> dis(L_range, H_range);
-
-    return dis(rng);
+    return static_cast<int>(rand() / (RAND_MAX + 1.0) * (H_range - L_range + 1) + L_range);
 }
 
 double normEuc(const double* x, const int l)
@@ -71,7 +60,7 @@ double normEuc(const double* x, const int l)
     for (int i = 0; i < l; i++)
         norm += x[i] * x[i];
 
-    return (sqrt(norm));
+    return sqrt(norm);
 }
 
 void multMatrixVect(double* y, double** A, const int l_A, const int c_A, const double* x, const int l_x)
@@ -100,7 +89,10 @@ double largEig(double** M, int l, int c)
     double* x = aloc_vectord(c);
     double* y = aloc_vectord(c);
 
-    for (i = 0; i < c; i++) x[i] = 1.0;
+    for (i = 0; i < c; i++)
+    {
+        x[i] = 1.0;
+    }
 
     double b = normEuc(x, c);
     do
@@ -109,13 +101,7 @@ double largEig(double** M, int l, int c)
         temp = b;
         b = normEuc(y, c); // ||y||
 
-        if (b < 1e-9)
-        {
-            // Se b for zero, não podemos dividir depois. Retornamos 0.
-            delete[] x;
-            delete[] y;
-            return 0.0;
-        }
+
 
         for (i = 0; i < c; i++)
             x[i] = y[i] / b;
@@ -125,7 +111,7 @@ double largEig(double** M, int l, int c)
     delete[] y;
     delete[] x;
 
-    return b;
+    return b > 0.0001 ? b : 0.0001;
 }
 
 int* aloc_vectori(const int lines)
