@@ -32,7 +32,7 @@ double calcFitness(const alelo* indiv)
     auto* simulador = new Simulador(200, 120);
 
     // variaveis
-    constexpr int memory = 10;
+    const int memory = 10;
     double prevRd[memory][6];
 
     for (auto& i : prevRd)
@@ -62,7 +62,7 @@ double calcFitness(const alelo* indiv)
 
     for (int step = 0; step < nsteps; step++)
     {
-        constexpr double alpha = 0.07;
+        const double alpha = 0.07;
 
         const double* in10 = simulador->readSensor(10);
         const double* in30 = simulador->readSensor(30);
@@ -140,7 +140,7 @@ double calcFitness(const alelo* indiv)
                     }
                     if (equal)
                     {
-                        constexpr double gama = 0.9;
+                        const double gama = 0.9;
                         const int m_linha = (memory - step % memory + m) % memory;
 
                         const double prob = 1 - gama / (memory - m_linha);
@@ -173,7 +173,7 @@ double calcFitness(const alelo* indiv)
 
         if (const double z = random_dou(); z < alpha / (sum_in + 1))
         {
-            constexpr double beta = 0.5;
+            const double beta = 6;
             Fitness -= beta;
             perdeuBeta++;
         }

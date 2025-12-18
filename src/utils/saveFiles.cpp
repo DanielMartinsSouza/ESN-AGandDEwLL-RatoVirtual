@@ -6,7 +6,7 @@
 #include <fstream>
 
 using namespace std;
-constexpr char nameDir[] = "output";
+const char nameDir[] = "output";
 
 void salv_simulacaoDE(const int nroExec)
 {

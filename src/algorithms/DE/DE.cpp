@@ -205,8 +205,8 @@ void generation_DE(estVIG2* est_vig2)
         {
             for (int gene = 0; gene < lcrom; gene++)
                 popNova.indiv[j].cromossomo[gene] = popVelha.indiv[j].cromossomo[gene];
-            popNova.indiv[j].fitness = popVelha.indiv[j].fitness;
-            //popNova.indiv[j].fitness = calcFitness(popNova.indiv[j].cromossomo);
+            //popNova.indiv[j].fitness = popVelha.indiv[j].fitness;
+            popNova.indiv[j].fitness = calcFitness(popNova.indiv[j].cromossomo);
         }
 
         j = j + 1;

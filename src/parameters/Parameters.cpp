@@ -7,7 +7,7 @@
 class ESN;
 // Iniciando os Parametros da ESN
 int input_size = 6;
-int reservoir_size = 10;
+int reservoir_size = 50;
 int n_out = 4;
 double spectral_radius_d = 0.95;
 double sparsity = 0.1; //0.1
@@ -30,7 +30,7 @@ int LLfinish = 0;
 double CR_DE = 0.9; //0.9; // crossover probability: DE parameter CR
 int crossover_type = 2; // crossover type: 1 - Binomial Crossover; 2 - VIntX; 3 - GbinX
 int mutation_type = 2; // mutation type: 1 - DE/rand/1; 2 - DE/best/1
-double F_DE = 0.5; // differential weight: DE parameter F
+double F_DE = 0.8; // differential weight: DE parameter F
 double pLL = 0.2; // probability of testing LinkageLearning in an offspring
 int gen; // generation
 

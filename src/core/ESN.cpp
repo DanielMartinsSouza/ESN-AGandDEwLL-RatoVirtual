@@ -68,8 +68,8 @@ ESN::~ESN()
 void ESN::weights_init() const
 {
     int i, j;
-    constexpr double min_W = -0.6;
-    constexpr double max_W = 0.6;
+    const double min_W = -0.6;
+    const double max_W = 0.6;
 
     for (i = 0; i < reservoir_size; i++)
     {
